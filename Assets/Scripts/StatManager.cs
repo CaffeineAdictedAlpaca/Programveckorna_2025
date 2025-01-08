@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class StatManager : MonoBehaviour
 {
-    float health;
-    float attack;
-    float charisma;
+    public float health;
+    public float attack;
+    public float charisma;
 
     void Start()
     {
