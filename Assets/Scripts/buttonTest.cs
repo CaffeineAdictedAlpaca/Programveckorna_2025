@@ -2,19 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sword1 : MonoBehaviour
+public class buttonTest : MonoBehaviour
 {
-
-    StatManager statManager;
+    [SerializeField]
+    GameObject background;
     // Start is called before the first frame update
     void Start()
     {
-        statManager = GameObject.FindAnyObjectByType<StatManager>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void click()
+    {
+        print("hello");
     }
 }
