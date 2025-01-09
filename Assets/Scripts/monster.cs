@@ -10,6 +10,10 @@ public class monster : MonoBehaviour
     public float charisma;
 
     [SerializeField]
+    TextMeshProUGUI fight_option;
+    [SerializeField]
+    TextMeshProUGUI leave_option;
+    [SerializeField]
     TextMeshProUGUI healthtext;
 
     StatManager player;
@@ -21,6 +25,8 @@ public class monster : MonoBehaviour
         player = FindAnyObjectByType<StatManager>();
         anim = GetComponent<Animator>();
         healthtext.enabled = false;
+        fight_option.enabled = false;
+        leave_option.enabled = false;
     }
 
     // Update is called once per frame
