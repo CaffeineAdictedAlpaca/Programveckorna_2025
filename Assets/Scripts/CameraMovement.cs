@@ -10,18 +10,18 @@ public class LimitedFirstPersonCamera : MonoBehaviour
     private float verticalRotation = 0f;   // Current vertical rotation
     private float horizontalRotation = 0f; // Current horizontal rotation
 
-    
 
-    
+
+
 
     public void Start()
     {
         // Initialize the horizontal rotation with the camera's initial Y-rotation
         horizontalRotation = transform.eulerAngles.y;
 
-
         
-       
+
+
     }
 
     void Update()
