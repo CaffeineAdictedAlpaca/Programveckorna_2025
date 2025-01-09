@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class monster : MonoBehaviour
 {
     public float health;
     public float attack;
     public float charisma;
+
+    [SerializeField]
+    TextMeshProUGUI healthtext;
 
     StatManager player;
 
@@ -16,11 +20,13 @@ public class monster : MonoBehaviour
     {
         player = FindAnyObjectByType<StatManager>();
         anim = GetComponent<Animator>();
+        healthtext.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        healthtext.text = "" + health;
         if (health<=0)
         {
             Destroy(gameObject);
@@ -39,6 +45,7 @@ public class monster : MonoBehaviour
     }
     public void Fight()
     {
+        healthtext.enabled = true;
         anim.SetBool("fight",true);
     }
     public void Attack()
