@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class monster : MonoBehaviour
 {
@@ -10,9 +11,9 @@ public class monster : MonoBehaviour
     public float charisma;
 
     [SerializeField]
-    TextMeshProUGUI fight_option;
+    GameObject fight_option;
     [SerializeField]
-    TextMeshProUGUI leave_option;
+    GameObject leave_option;
     [SerializeField]
     TextMeshProUGUI healthtext;
 
@@ -25,8 +26,8 @@ public class monster : MonoBehaviour
         player = FindAnyObjectByType<StatManager>();
         anim = GetComponent<Animator>();
         healthtext.enabled = false;
-        fight_option.enabled = false;
-        leave_option.enabled = false;
+        fight_option.SetActive(false);
+        leave_option.SetActive(false);
     }
 
     // Update is called once per frame
@@ -41,7 +42,7 @@ public class monster : MonoBehaviour
     // Function to call when the object is clicked
     public void OnObjectClicked()
     {
-        Fight();
+        talk();
     }
 
     private void OnMouseDown()
@@ -49,10 +50,22 @@ public class monster : MonoBehaviour
         // Detect mouse click on the object's collider
         OnObjectClicked();
     }
+    public void talk()
+    {
+        fight_option.SetActive(true);
+        leave_option.SetActive(true);
+    }
     public void Fight()
     {
         healthtext.enabled = true;
-        anim.SetBool("fight",true);
+        anim.SetBool("fight", true);
+        fight_option.SetActive(false);
+        leave_option.SetActive(false);
+    }
+    public void leave()
+    {
+        fight_option.SetActive(false);
+        leave_option.SetActive(false);
     }
     public void Attack()
     {
