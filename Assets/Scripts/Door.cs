@@ -34,7 +34,7 @@ public class Door : MonoBehaviour
         fade.StartFade();
 
         // Wait for the fade to complete (adjust duration as needed)
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.5f);
 
         // Load the next scene
         SceneManager.LoadScene(nextScene);
