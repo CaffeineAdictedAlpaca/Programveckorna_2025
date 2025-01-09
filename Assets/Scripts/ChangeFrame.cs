@@ -6,6 +6,8 @@ public class ChangeFrame : MonoBehaviour
 {
     FadeScript fade;
     [SerializeField] private List<GameObject> frame = new List<GameObject>();
+    [SerializeField] int changeTo;
+    [SerializeField] int thisFrame;
 
     private void Start()
     {
@@ -28,8 +30,8 @@ public class ChangeFrame : MonoBehaviour
         fade.StartFade();
         // Wait (adjust duration as needed)
         yield return new WaitForSeconds(0.4f);
-        frame[0].SetActive(false);
-        frame[1].SetActive(true);
+        frame[thisFrame-1].SetActive(false);
+        frame[changeTo -1].SetActive(true);
         fade.EndFade();
     }
 }
