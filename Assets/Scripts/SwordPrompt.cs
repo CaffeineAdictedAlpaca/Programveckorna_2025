@@ -8,8 +8,14 @@ public class SwordPrompt : MonoBehaviour
     public Button yesButton; // Reference to the Yes button
     public Button noButton; // Reference to the No button
 
+    private StatManager statManager;
+
+
     void Start()
     {
+        statManager = GameObject.FindAnyObjectByType<StatManager>();
+
+
         // Ensure the prompt panel is initially inactive
         if (promptPanel != null)
         {
@@ -42,6 +48,16 @@ public class SwordPrompt : MonoBehaviour
     {
         Debug.Log("You accepted the sword!");
         ClosePrompt();
+
+        if (statManager != null)
+        {
+            statManager.attack += statManager.attack * 0.2f; // Increase attack by 20%
+        }
+        else
+        {
+            Debug.LogWarning("StatManager not found!");
+        }
+
     }
 
     // Called when No is clicked
