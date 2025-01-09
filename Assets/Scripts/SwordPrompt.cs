@@ -33,7 +33,19 @@ public class SwordPrompt : MonoBehaviour
             noButton.onClick.AddListener(DeclineSword);
         }
     }
+    // Function to call when the object is clicked
+    public void OnObjectClicked()
+    {
+        ShowPrompt();
 
+        
+    }
+
+    private void OnMouseDown()
+    {
+        // Detect mouse click on the object's collider
+        OnObjectClicked();
+    }
     // Called when the button below the sword is pressed
     public void ShowPrompt()
     {
@@ -46,6 +58,9 @@ public class SwordPrompt : MonoBehaviour
     // Called when Yes is clicked
     void AcceptSword()
     {
+
+        
+
         Debug.Log("You accepted the sword!");
         ClosePrompt();
 
@@ -64,7 +79,12 @@ public class SwordPrompt : MonoBehaviour
     void DeclineSword()
     {
         Debug.Log("You declined the sword.");
+
+        
+
         ClosePrompt();
+
+
     }
 
     // Hides the prompt panel

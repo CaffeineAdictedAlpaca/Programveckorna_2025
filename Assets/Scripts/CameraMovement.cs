@@ -2,16 +2,26 @@ using UnityEngine;
 
 public class LimitedFirstPersonCamera : MonoBehaviour
 {
-    public float sensitivity = 2f; // Mouse sensitivity
-    public float maxVerticalAngle = 45f; // Maximum up/down angle (degrees)
+    public float sensitivity = 2f;          // Mouse sensitivity
+    public float maxVerticalAngle = 45f;   // Maximum up/down angle (degrees)
+    public float minHorizontalAngle = -90f; // Minimum left angle (degrees)
+    public float maxHorizontalAngle = 90f; // Maximum right angle (degrees)
 
-    private float verticalRotation = 0f; // Current vertical rotation
+    private float verticalRotation = 0f;   // Current vertical rotation
+    private float horizontalRotation = 0f; // Current horizontal rotation
 
+    
 
-    void Start()
+    
+
+    public void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        // Initialize the horizontal rotation with the camera's initial Y-rotation
+        horizontalRotation = transform.eulerAngles.y;
+
+
+        
+       
     }
 
     void Update()
@@ -25,16 +35,15 @@ public class LimitedFirstPersonCamera : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X") * sensitivity;
         float mouseY = Input.GetAxis("Mouse Y") * sensitivity;
 
-        // Rotate horizontally
-        transform.Rotate(Vector3.up * mouseX);
+        // Adjust horizontal rotation (yaw)
+        horizontalRotation += mouseX;
+        horizontalRotation = Mathf.Clamp(horizontalRotation, minHorizontalAngle, maxHorizontalAngle);
 
-        // Adjust vertical rotation
+        // Adjust vertical rotation (pitch)
         verticalRotation -= mouseY;
         verticalRotation = Mathf.Clamp(verticalRotation, -maxVerticalAngle, maxVerticalAngle);
 
-        // Apply vertical rotation (pitch)
-        Vector3 localEulerAngles = transform.localEulerAngles;
-        localEulerAngles.x = verticalRotation;
-        transform.localEulerAngles = new Vector3(verticalRotation, localEulerAngles.y, localEulerAngles.z);
+        // Apply the clamped rotations to the camera
+        transform.localEulerAngles = new Vector3(verticalRotation, horizontalRotation, 0f);
     }
 }
