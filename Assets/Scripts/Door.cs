@@ -12,6 +12,17 @@ public class Door : MonoBehaviour
     {
         fade = GameObject.FindAnyObjectByType<FadeScript>();
     }
+    // Function to call when the object is clicked
+    public void OnObjectClicked()
+    {
+        OpenDoor();
+    }
+
+    private void OnMouseDown()
+    {
+        // Detect mouse click on the object's collider
+        OnObjectClicked();
+    }
     public virtual void OpenDoor()
     {
         StartCoroutine(OpenDoorWithDelay());
