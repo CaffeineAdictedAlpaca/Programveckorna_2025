@@ -9,10 +9,13 @@ public class monster : MonoBehaviour
     public float charisma;
 
     StatManager player;
+
+    Animator anim;
     // Start is called before the first frame update
     void Start()
     {
         player = FindAnyObjectByType<StatManager>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -23,10 +26,27 @@ public class monster : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    // Function to call when the object is clicked
+    public void OnObjectClicked()
+    {
+        Fight();
+    }
 
+    private void OnMouseDown()
+    {
+        // Detect mouse click on the object's collider
+        OnObjectClicked();
+    }
     public void Fight()
     {
+        anim.SetBool("fight",true);
+    }
+    public void Attack()
+    {
         player.health -= attack;
+    }
+    public void hurt()
+    {
         health -= player.attack;
     }
 }

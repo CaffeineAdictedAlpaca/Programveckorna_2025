@@ -20,7 +20,17 @@ public class buttonTest : MonoBehaviour
             flaska.SetActive(false);
         }
     }
+    // Function to call when the object is clicked
+    public void OnObjectClicked()
+    {
+        click();
+    }
 
+    private void OnMouseDown()
+    {
+        // Detect mouse click on the object's collider
+        OnObjectClicked();
+    }
     public void click()
     {
         flaska.SetActive(true);
