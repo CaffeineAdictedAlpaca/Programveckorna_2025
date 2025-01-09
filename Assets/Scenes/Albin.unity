@@ -701,7 +701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb0e85398cb9b44c8f814418381e981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 500
   attack: 25
   charisma: 0
 --- !u!212 &2033938918
@@ -870,7 +870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f872b94235554a4db20e9ed3a4d54a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 50
+  health: 500
   attack: 20
   charisma: 0
 --- !u!70 &2070120687
