@@ -14,7 +14,18 @@ public class Door : MonoBehaviour
     }
     public virtual void OpenDoor()
     {
+        StartCoroutine(OpenDoorWithDelay());
+    }
+
+    private IEnumerator OpenDoorWithDelay()
+    {
+        // Start the fade effect
         fade.StartFade();
-        //SceneManager.LoadScene(nextScene);
+
+        // Wait for the fade to complete (adjust duration as needed)
+        yield return new WaitForSeconds(1.0f);
+
+        // Load the next scene
+        SceneManager.LoadScene(nextScene);
     }
 }
