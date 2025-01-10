@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
-    [SerializeField] string nextScene;
     FadeScript fade;
+    RoomTracker roomTracker;
 
     private void Start()
     {
         fade = GameObject.FindAnyObjectByType<FadeScript>();
+        roomTracker = GameObject.FindAnyObjectByType<RoomTracker>();
     }
     // Function to call when the object is clicked
     public void OnObjectClicked()
@@ -37,6 +38,6 @@ public class Door : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         // Load the next scene
-        SceneManager.LoadScene(nextScene);
+        roomTracker.LoadNextScene();
     }
 }

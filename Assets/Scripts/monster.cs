@@ -10,10 +10,27 @@ public class monster : MonoBehaviour
     public float attack;
     public float charisma;
 
+    public bool Dodge_QTE_start;
+    public bool Attack_QTE_start;
+
+    public Vector2 spawn;
+
     [SerializeField]
     GameObject fight_option;
     [SerializeField]
     GameObject leave_option;
+    [SerializeField]
+    GameObject attack_option;
+
+    [SerializeField]
+    GameObject bar;
+    [SerializeField]
+    GameObject stick;
+    [SerializeField]
+    GameObject dodge_window;
+    [SerializeField]
+    GameObject attack_window;
+
     [SerializeField]
     TextMeshProUGUI healthtext;
 
@@ -28,6 +45,13 @@ public class monster : MonoBehaviour
         healthtext.enabled = false;
         fight_option.SetActive(false);
         leave_option.SetActive(false);
+        attack_option.SetActive(false);
+        bar.SetActive(false);
+        attack_window.SetActive(false);
+        dodge_window.SetActive(false);
+        stick.SetActive(false);
+        Dodge_QTE_start = false;
+        Attack_QTE_start = false;
     }
 
     // Update is called once per frame
@@ -37,6 +61,11 @@ public class monster : MonoBehaviour
         if (health<=0)
         {
             Destroy(gameObject);
+        }
+
+        if (Dodge_QTE_start == true || Attack_QTE_start == true)
+        {
+            stick.transform.position += new Vector3(500, 0, 0) * Time.deltaTime;
         }
     }
     // Function to call when the object is clicked
@@ -58,21 +87,66 @@ public class monster : MonoBehaviour
     public void Fight()
     {
         healthtext.enabled = true;
-        anim.SetBool("fight", true);
         fight_option.SetActive(false);
         leave_option.SetActive(false);
+        attack_option.SetActive(true);
     }
     public void leave()
     {
         fight_option.SetActive(false);
         leave_option.SetActive(false);
     }
-    public void Attack()
+    public void Player_turn()
     {
-        player.health -= attack;
+        attack_option.SetActive(true);
     }
-    public void hurt()
+    public void Monster_turn()
+    {
+        stick.SetActive(true);
+        bar.SetActive(true);
+        dodge_window.SetActive(true);
+        stick.transform.position = spawn;
+        Dodge_QTE_start = true;
+    }
+
+    public void PlayerATK()
     {
         health -= player.attack;
+        anim.SetTrigger("PlayerATK");
+        bar.SetActive(false);
+        attack_window.SetActive(false);
+        stick.SetActive(false);
+    }
+    public void MonsterATK()
+    {
+        bar.SetActive(false);
+        dodge_window.SetActive(false);
+        stick.SetActive(false);
+        player.health -= attack;
+        anim.SetTrigger("MonsterATK");
+    }
+
+    public void QTE_attacking()
+    {
+        attack_option.SetActive(false);
+        bar.SetActive(true);
+        attack_window.SetActive(true);
+        stick.SetActive(true);
+        stick.transform.position = spawn;
+        Attack_QTE_start = true;
+    }
+    public void QTE_hit()
+    {
+        bar.SetActive(false);
+        attack_window.SetActive(false);
+        stick.SetActive(false);
+        anim.SetTrigger("PlayerATK");
+    }
+    public void QTE_dodge()
+    {
+        bar.SetActive(false);
+        dodge_window.SetActive(false);
+        stick.SetActive(false);
+        anim.SetTrigger("MonsterATK");
     }
 }
