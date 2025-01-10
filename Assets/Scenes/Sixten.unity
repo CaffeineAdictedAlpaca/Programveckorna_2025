@@ -946,6 +946,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueBox
       objectReference: {fileID: 0}
+    - target: {fileID: 7956553767698567890, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
+      propertyPath: lines.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8691337029633808793, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
