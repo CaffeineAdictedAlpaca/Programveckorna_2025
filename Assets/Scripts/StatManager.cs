@@ -5,9 +5,10 @@ using UnityEngine;
 public class StatManager : MonoBehaviour
 {
     public float health;
+    public float maxHealth;
     public float attack;
     public float charisma;
-    public int munyun;
+    public int money;
 
     void Start()
     {
