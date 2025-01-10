@@ -14,7 +14,7 @@ public class HealthBar : MonoBehaviour
     {
         slider = gameObject.GetComponent<Slider>();
         statTracker = FindFirstObjectByType<StatManager>();
-        slider.maxValue = statTracker.health;
+        slider.maxValue = statTracker.maxHealth;
     }
     private void Update()
     {
