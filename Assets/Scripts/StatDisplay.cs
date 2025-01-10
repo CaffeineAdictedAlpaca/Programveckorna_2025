@@ -21,10 +21,11 @@ public class UIManager : MonoBehaviour
         if (statManager != null)
         {
             // Update the UI with the stats
-            healthText.text = "Health: " + statManager.health.ToString("F0");
+            
             attackText.text = "Attack: " + statManager.attack.ToString("F0");
             charismaText.text = "Charisma: " + statManager.charisma.ToString("F0");
             moneyText.text = "Money: " + statManager.money.ToString();
+            
         }
     }
 }
