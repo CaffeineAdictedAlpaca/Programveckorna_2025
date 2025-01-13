@@ -15,6 +15,8 @@ public class RoomTracker : MonoBehaviour
 
     void Start()
     {
+        DontDestroyOnLoad(gameObject);
+
         // Scramble the scene list while preserving fixed indices.
         scrambledScenes = ScrambleScenes(sceneNames, fixedIndices);
 
