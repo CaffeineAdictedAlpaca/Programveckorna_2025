@@ -7,9 +7,12 @@ public class ItemPrompt : MonoBehaviour
     public GameObject promptPanel; // Reference to the prompt panel UI
     public Button yesButton; // Reference to the Yes button
     public Button noButton; // Reference to the No button
-    [SerializeField] float attackPercent;
-    [SerializeField] float healthPercent;
-    [SerializeField] float charismaPercent;
+    [SerializeField] float addAttackPercent;
+    [SerializeField] float addHealthPercent;
+    [SerializeField] float addCharismaPercent;
+    [SerializeField] float takeAttackPercent;
+    [SerializeField] float takeHealthPercent;
+    [SerializeField] float takeCharismaPercent;
     [SerializeField] int moneyAmount;
     public StatManager statManager;
     public GameObject statDisplay;
@@ -18,9 +21,9 @@ public class ItemPrompt : MonoBehaviour
 
     void Start()
     {
-        attackPercent = attackPercent / 100;
-        healthPercent = healthPercent / 100;        
-        charismaPercent = charismaPercent / 100;
+        addAttackPercent = addAttackPercent / 100;
+        addHealthPercent = addHealthPercent / 100;        
+        addCharismaPercent = addCharismaPercent / 100;
 
         statManager = GameObject.FindAnyObjectByType<StatManager>();
 
@@ -76,9 +79,9 @@ public class ItemPrompt : MonoBehaviour
 
         if (statManager != null)
         {
-            statManager.attack += statManager.attack * attackPercent; // Increase attack by attakPercent;
-            statManager.health += statManager.health * healthPercent;
-            statManager.charisma += statManager.charisma * charismaPercent;
+            statManager.attack += statManager.attack * addAttackPercent; // Increase attack by attakPercent;
+            statManager.health += statManager.health * addHealthPercent;
+            statManager.charisma += statManager.charisma * addCharismaPercent;
             statManager.money += moneyAmount;
         }
         else
