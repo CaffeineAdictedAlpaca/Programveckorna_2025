@@ -7,6 +7,7 @@ TagManager:
   - window
   - dodge_window
   - attack_window
+  - Sword
   layers:
   - Default
   - TransparentFX
