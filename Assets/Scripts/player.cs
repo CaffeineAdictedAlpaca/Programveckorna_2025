@@ -7,6 +7,8 @@ public class player : MonoBehaviour
 {
     [SerializeField]
     TextMeshProUGUI health;
+    [SerializeField]
+    TextMeshProUGUI damage;
 
     StatManager P;
     // Start is called before the first frame update
@@ -18,6 +20,7 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        health.text = "" + P.health;
+        health.text = "Health: " + P.health;
+        damage.text = "ATK: " + P.attack;
     }
 }
