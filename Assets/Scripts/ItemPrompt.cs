@@ -63,12 +63,9 @@ public class ItemPrompt : MonoBehaviour
     }
 
     // Called when Yes is clicked
-    void AcceptItem()
+    public void AcceptItem()
     {
-
-        
-
-        Debug.Log("You accepted the item!");
+        print("You accepted the item!");
         ClosePrompt();
 
         if (statManager != null)
@@ -86,7 +83,7 @@ public class ItemPrompt : MonoBehaviour
     }
 
     // Called when No is clicked
-    void DeclineItem()
+    public void DeclineItem()
     {
         Debug.Log("You declined the item.");
 
