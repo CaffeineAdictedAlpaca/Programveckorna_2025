@@ -2353,8 +2353,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  maxHealth: 0
+  maxHealth: 100
   attack: 50
+  agility: 100
   charisma: 0
   money: 0
 --- !u!212 &2033938918

@@ -106,8 +106,8 @@ public class monster : MonoBehaviour
         stick.SetActive(true);
         bar.SetActive(true);
         dodge_window.SetActive(true);
-        dodge_window.transform.position = new Vector2(Random.Range(530, 1600), 140);
-        dodge_window.transform.localScale = new Vector3(5f, 0.74163f, 0);
+        dodge_window.transform.position = new Vector2(Random.Range(700, 1600), 140);
+        dodge_window.transform.localScale = new Vector3(player.agility * 0.006f, 0.74163f, 0);
         stick.transform.position = spawn;
         Dodge_QTE_start = true;
     }
@@ -134,7 +134,8 @@ public class monster : MonoBehaviour
         attack_option.SetActive(false);
         bar.SetActive(true);
         attack_window.SetActive(true);
-        attack_window.transform.position = new Vector2(Random.Range(530, 1600), 140);
+        attack_window.transform.position = new Vector2(Random.Range(700, 1600), 140);
+        attack_window.transform.localScale = new Vector3(player.agility * 0.006f, 0.74163f, 0);
         stick.SetActive(true);
         stick.transform.position = spawn;
         Attack_QTE_start = true;
