@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    public TextMeshProUGUI healthText;
+    
     public TextMeshProUGUI attackText;
     public TextMeshProUGUI charismaText;
     public TextMeshProUGUI moneyText;
