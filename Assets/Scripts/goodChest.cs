@@ -61,7 +61,7 @@ public class goodChest : MonoBehaviour
     {
 
 
-        
+        statDisplay.SetActive(true);
 
         chestloot.SetActive(true);
         Debug.Log("You accepted the item!");
