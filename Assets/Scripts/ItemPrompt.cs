@@ -22,6 +22,10 @@ public class ItemPrompt : MonoBehaviour
         addHealthPercent = addHealthPercent / 100;        
         addCharismaPercent = addCharismaPercent / 100;
 
+
+
+
+        
         statManager = GameObject.FindAnyObjectByType<StatManager>();
 
         // Ensure the prompt panel is initially inactive
