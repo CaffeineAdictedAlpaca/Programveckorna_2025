@@ -371,6 +371,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e432acb833350844a8185e41f2cc57c8, type: 3}
+--- !u!1 &715833039 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4246559255372328190, guid: e810646f5fa9c984d96b902e10c99556, type: 3}
+  m_PrefabInstance: {fileID: 39302503}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &886851895
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,7 +523,19 @@ PrefabInstance:
       value: -121
       objectReference: {fileID: 0}
     - target: {fileID: 531395643551086184, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
+      propertyPath: statDisplay
+      value: 
+      objectReference: {fileID: 715833039}
+    - target: {fileID: 531395643551086184, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
       propertyPath: healthPercent
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 531395643551086184, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
+      propertyPath: addAttackPercent
+      value: 9.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 531395643551086184, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
+      propertyPath: addHealthPercent
       value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 1074671246381182868, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
