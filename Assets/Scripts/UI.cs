@@ -5,39 +5,38 @@ using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
 {
-    // The name of the child GameObject to activate
-    [SerializeField]
-    private string childNameToActivate;
-
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
     }
-    void OnEnable()
+
+    private static bool isFirstSceneLoad = true;
+
+    void Awake()
     {
         // Subscribe to the sceneLoaded event
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    void OnDisable()
+    void OnDestroy()
     {
-        // Unsubscribe from the sceneLoaded event
+        // Unsubscribe from the sceneLoaded event to avoid memory leaks
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // Find the child by name
-        Transform childTransform = transform.Find(childNameToActivate);
-
-        if (childTransform != null)
+        if (isFirstSceneLoad)
         {
-            // Activate the child GameObject
-            childTransform.gameObject.SetActive(true);
+            // Skip activation for the first scene load
+            isFirstSceneLoad = false;
+            return;
         }
-        else
+
+        // Activate all children of this GameObject
+        foreach (Transform child in transform)
         {
-            Debug.LogWarning($"Child GameObject with name '{childNameToActivate}' not found under '{gameObject.name}'.");
+            child.gameObject.SetActive(true);
         }
     }
 }
