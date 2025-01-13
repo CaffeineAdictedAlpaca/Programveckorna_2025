@@ -14,6 +14,7 @@ public class monster : MonoBehaviour
     public bool Attack_QTE_start;
 
     public Vector2 spawn;
+    public Vector2 QTE_spawn;
 
     [SerializeField]
     GameObject fight_option;
@@ -65,7 +66,7 @@ public class monster : MonoBehaviour
 
         if (Dodge_QTE_start == true || Attack_QTE_start == true)
         {
-            stick.transform.position += new Vector3(500, 0, 0) * Time.deltaTime;
+            stick.transform.position += new Vector3(1700, 0, 0) * Time.deltaTime;
         }
     }
     // Function to call when the object is clicked
@@ -105,6 +106,8 @@ public class monster : MonoBehaviour
         stick.SetActive(true);
         bar.SetActive(true);
         dodge_window.SetActive(true);
+        dodge_window.transform.position = new Vector2(Random.Range(530, 1600), 140);
+        dodge_window.transform.localScale = new Vector3(5f, 0.74163f, 0);
         stick.transform.position = spawn;
         Dodge_QTE_start = true;
     }
@@ -131,6 +134,7 @@ public class monster : MonoBehaviour
         attack_option.SetActive(false);
         bar.SetActive(true);
         attack_window.SetActive(true);
+        attack_window.transform.position = new Vector2(Random.Range(530, 1600), 140);
         stick.SetActive(true);
         stick.transform.position = spawn;
         Attack_QTE_start = true;
