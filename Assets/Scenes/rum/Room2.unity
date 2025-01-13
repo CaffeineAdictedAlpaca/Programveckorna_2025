@@ -131,6 +131,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 531395643551086184, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
+      propertyPath: addAttackPercent
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1240436702576648065, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.1605392
