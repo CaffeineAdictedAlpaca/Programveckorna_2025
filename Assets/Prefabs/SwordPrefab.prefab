@@ -498,7 +498,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1552436027647093606
 Transform:
   m_ObjectHideFlags: 0
@@ -713,11 +713,15 @@ MonoBehaviour:
   promptPanel: {fileID: 2362924434133493028}
   yesButton: {fileID: 6449490689556930343}
   noButton: {fileID: 5705785093579954000}
-  attackPercent: 20
-  healthPercent: 0
-  charismaPercent: 0
+  addAttackPercent: 0
+  addHealthPercent: 0
+  addCharismaPercent: 0
+  takeAttackPercent: 0
+  takeHealthPercent: 0
+  takeCharismaPercent: 0
   moneyAmount: 0
   statManager: {fileID: 0}
+  statDisplay: {fileID: 0}
 --- !u!1 &6162536701701082261
 GameObject:
   m_ObjectHideFlags: 0
