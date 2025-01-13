@@ -34,16 +34,7 @@ public class ItemPrompt : MonoBehaviour
             promptPanel.SetActive(false);
         }
 
-        // Add listeners to Yes and No buttons
-        if (yesButton != null)
-        {
-            yesButton.onClick.AddListener(AcceptItem);
-        }
-
-        if (noButton != null)
-        {
-            noButton.onClick.AddListener(DeclineItem);
-        }
+        
     }
     // Function to call when the object is clicked
     public void OnObjectClicked()
