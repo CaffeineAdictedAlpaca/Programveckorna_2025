@@ -28,7 +28,7 @@ public class ItemPrompt : MonoBehaviour
 
 
 
-        
+        statDisplay = GameObject.FindAnyObjectByType<UIManager>().gameObject;
         statManager = GameObject.FindAnyObjectByType<StatManager>();
 
         // Ensure the prompt panel is initially inactive
