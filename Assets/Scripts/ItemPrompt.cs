@@ -17,9 +17,9 @@ public class ItemPrompt : MonoBehaviour
 
     void Start()
     {
-        attackPercent = attackPercent / 10;
-        healthPercent = healthPercent / 10;        
-        charismaPercent = charismaPercent / 10;
+        attackPercent = attackPercent / 100;
+        healthPercent = healthPercent / 100;        
+        charismaPercent = charismaPercent / 100;
 
         statManager = GameObject.FindAnyObjectByType<StatManager>();
 
@@ -79,6 +79,7 @@ public class ItemPrompt : MonoBehaviour
         {
             Debug.LogWarning("StatManager not found!");
         }
+        Destroy(gameObject);
 
     }
 
