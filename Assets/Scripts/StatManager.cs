@@ -16,4 +16,12 @@ public class StatManager : MonoBehaviour
         // Keep statManeger when changing scene
         DontDestroyOnLoad(gameObject);
     }
+
+    private void Update()
+    {
+        if (health>maxHealth)
+        {
+            health = maxHealth;
+        }
+    }
 }
