@@ -661,13 +661,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameUI
       objectReference: {fileID: 0}
+    - target: {fileID: 238703997003683912, guid: f02f859b8304c7140bf25168f7d925db, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1547041993368818336, guid: f02f859b8304c7140bf25168f7d925db, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1547041993368818336, guid: f02f859b8304c7140bf25168f7d925db, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2890246506971727445, guid: f02f859b8304c7140bf25168f7d925db, type: 3}
       propertyPath: m_Pivot.x
@@ -751,11 +755,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3598363610784633226, guid: f02f859b8304c7140bf25168f7d925db, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3598363610784633226, guid: f02f859b8304c7140bf25168f7d925db, type: 3}
       propertyPath: m_TagString
       value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 5137308166028717471, guid: f02f859b8304c7140bf25168f7d925db, type: 3}
+      propertyPath: childNameToActivate
+      value: UIholder
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
