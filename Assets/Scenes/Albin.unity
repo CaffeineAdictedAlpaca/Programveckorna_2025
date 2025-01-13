@@ -774,14 +774,14 @@ RectTransform:
   m_GameObject: {fileID: 721114761}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.0360968, y: 0.74163, z: 1}
+  m_LocalScale: {x: 0.58853394, y: 0.74163, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1201102997}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -315}
+  m_AnchoredPosition: {x: 0.11896, y: -315}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &721114763
@@ -2095,14 +2095,14 @@ RectTransform:
   m_GameObject: {fileID: 1876219915}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.0360968, y: 0.74163, z: 1}
+  m_LocalScale: {x: 0.5118354, y: 0.74163, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1201102997}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -315}
+  m_AnchoredPosition: {x: 0.12531, y: -315}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1876219917
@@ -2352,10 +2352,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccb0e85398cb9b44c8f814418381e981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1000
+  health: 100
+  maxHealth: 100
   attack: 50
+  agility: 100
   charisma: 0
-  munyun: 0
+  money: 0
 --- !u!212 &2033938918
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2469,7 +2471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3713202036071147588, guid: 829c84f3549bfdb4f91aab0ae4fd4f33, type: 3}
       propertyPath: health
-      value: 2000
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3713202036071147588, guid: 829c84f3549bfdb4f91aab0ae4fd4f33, type: 3}
       propertyPath: window
@@ -2578,9 +2580,9 @@ SceneRoots:
   m_Roots:
   - {fileID: 464648457}
   - {fileID: 1468872938}
+  - {fileID: 764286568}
   - {fileID: 195248293}
   - {fileID: 1170215611}
   - {fileID: 2033938919}
   - {fileID: 3761853191003381330}
-  - {fileID: 764286568}
   - {fileID: 404622638}
