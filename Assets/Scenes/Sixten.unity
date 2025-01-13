@@ -1222,6 +1222,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6369431437290410073, guid: 99898d51c60a78f488de57c2c26429a6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6369431437290410073, guid: 99898d51c60a78f488de57c2c26429a6, type: 3}
       propertyPath: maxHealth
       value: 100
       objectReference: {fileID: 0}
@@ -1282,6 +1286,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
+      propertyPath: sceneNames.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
+      propertyPath: fixedIndices.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
+      propertyPath: sceneNames.Array.data[0]
+      value: Sixten2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
+      propertyPath: sceneNames.Array.data[1]
+      value: Room1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
+      propertyPath: sceneNames.Array.data[2]
+      value: Room2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
+      propertyPath: sceneNames.Array.data[3]
+      value: room3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
+      propertyPath: sceneNames.Array.data[4]
+      value: room4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
+      propertyPath: fixedIndices.Array.data[1]
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4458477064387132448, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
       propertyPath: m_Name
       value: RoomTracker
