@@ -82,6 +82,7 @@ public class monster : MonoBehaviour
     }
     public void talk()
     {
+        FindAnyObjectByType<CameraScript>().enabled = false;
         fight_option.SetActive(true);
         leave_option.SetActive(true);
     }
@@ -94,6 +95,7 @@ public class monster : MonoBehaviour
     }
     public void leave()
     {
+        FindAnyObjectByType<CameraScript>().enabled = true;
         fight_option.SetActive(false);
         leave_option.SetActive(false);
     }
