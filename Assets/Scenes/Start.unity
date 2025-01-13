@@ -359,7 +359,7 @@ GameObject:
   - component: {fileID: 1158211334}
   - component: {fileID: 1158211337}
   m_Layer: 0
-  m_Name: Start
+  m_Name: StartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -567,7 +567,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1763360090}
   - component: {fileID: 1763360089}
-  - component: {fileID: 1763360088}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -575,14 +574,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1763360088
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1763360087}
-  m_Enabled: 1
 --- !u!20 &1763360089
 Camera:
   m_ObjectHideFlags: 0
@@ -660,18 +651,6 @@ PrefabInstance:
     - target: {fileID: 238703997003683912, guid: f02f859b8304c7140bf25168f7d925db, type: 3}
       propertyPath: m_Name
       value: GameUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 238703997003683912, guid: f02f859b8304c7140bf25168f7d925db, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1547041993368818336, guid: f02f859b8304c7140bf25168f7d925db, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1547041993368818336, guid: f02f859b8304c7140bf25168f7d925db, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2890246506971727445, guid: f02f859b8304c7140bf25168f7d925db, type: 3}
       propertyPath: m_Pivot.x
@@ -753,17 +732,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3598363610784633226, guid: f02f859b8304c7140bf25168f7d925db, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3598363610784633226, guid: f02f859b8304c7140bf25168f7d925db, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 5137308166028717471, guid: f02f859b8304c7140bf25168f7d925db, type: 3}
-      propertyPath: childNameToActivate
-      value: UIholder
+    - target: {fileID: 6727512793250825146, guid: f02f859b8304c7140bf25168f7d925db, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

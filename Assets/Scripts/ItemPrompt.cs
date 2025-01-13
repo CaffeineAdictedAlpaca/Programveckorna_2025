@@ -15,7 +15,8 @@ public class ItemPrompt : MonoBehaviour
     [SerializeField] float takeCharismaPercent;
     [SerializeField] int moneyAmount;
     public StatManager statManager;
-    
+    public GameObject statDisplay;
+
 
 
     void Start()
@@ -59,6 +60,9 @@ public class ItemPrompt : MonoBehaviour
     // Called when the button below the item is pressed
     public void ShowPrompt()
     {
+
+        statDisplay.SetActive(false);
+
         if (promptPanel != null)
         {
             promptPanel.SetActive(true);
@@ -68,6 +72,8 @@ public class ItemPrompt : MonoBehaviour
     // Called when Yes is clicked
     public void AcceptItem()
     {
+        statDisplay.SetActive(true);
+
         print("You accepted the item!");
         ClosePrompt();
 
@@ -89,6 +95,8 @@ public class ItemPrompt : MonoBehaviour
     // Called when No is clicked
     public void DeclineItem()
     {
+        statDisplay.SetActive(true);
+
         Debug.Log("You declined the item.");
 
         

@@ -70,9 +70,11 @@ public class badChest : MonoBehaviour
     void AcceptItem()
     {
 
+
+
         statManager.health -= statManager.health * healthPercent;
 
-
+        statDisplay.SetActive(true);
 
         Debug.Log("You accepted the item!");
         ClosePrompt();
