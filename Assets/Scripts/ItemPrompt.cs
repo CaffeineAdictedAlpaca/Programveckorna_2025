@@ -10,9 +10,6 @@ public class ItemPrompt : MonoBehaviour
     [SerializeField] float addAttackPercent;
     [SerializeField] float addHealthPercent;
     [SerializeField] float addCharismaPercent;
-    [SerializeField] float takeAttackPercent;
-    [SerializeField] float takeHealthPercent;
-    [SerializeField] float takeCharismaPercent;
     [SerializeField] int moneyAmount;
     public StatManager statManager;
     public GameObject statDisplay;
@@ -28,7 +25,7 @@ public class ItemPrompt : MonoBehaviour
 
 
 
-        
+        statDisplay = GameObject.FindAnyObjectByType<UIManager>().gameObject;
         statManager = GameObject.FindAnyObjectByType<StatManager>();
 
         // Ensure the prompt panel is initially inactive
@@ -83,7 +80,7 @@ public class ItemPrompt : MonoBehaviour
 
         if (statManager != null)
         {
-            statManager.attack += statManager.attack * addAttackPercent; // Increase attack by attakPercent;
+            statManager.attack += statManager.attack * addAttackPercent; // Increase attack by addAttakPercent;
             statManager.health += statManager.health * addHealthPercent;
             statManager.charisma += statManager.charisma * addCharismaPercent;
             statManager.money += moneyAmount;
