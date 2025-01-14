@@ -8,11 +8,18 @@ public class ChangeFrame : MonoBehaviour
     [SerializeField] private List<GameObject> frame = new List<GameObject>();
     [SerializeField] int changeTo;
     [SerializeField] int thisFrame;
+    [SerializeField] bool dissableCamera;
+    [SerializeField] bool disableSword;
+    GameObject sword;
+    CameraScript camera;
 
     private void Start()
     {
+        //sword = GameObject.FindGameObjectWithTag("Sword").gameObject;
+        camera = GameObject.FindAnyObjectByType<CameraScript>().GetComponent<CameraScript>();
         fade = GameObject.FindAnyObjectByType<FadeScript>();
     }
+
     // Function to call when the object is clicked
     public void OnObjectClicked()
     {
@@ -28,8 +35,32 @@ public class ChangeFrame : MonoBehaviour
     public IEnumerator Change()
     {
         fade.StartFade();
-        // Wait (adjust duration as needed)
         yield return new WaitForSeconds(0.4f);
+        GameObject cameraObject = camera.gameObject;
+        if (disableSword)
+        {
+            Transform firstChild = cameraObject.transform.GetChild(0);
+            firstChild.gameObject.SetActive(false);
+            Debug.Log("Activated: " + firstChild.gameObject.name);
+        }
+        else if (cameraObject.transform.childCount > 0)
+        {
+            Transform firstChild = cameraObject.transform.GetChild(0);
+            firstChild.gameObject.SetActive(true);
+            Debug.Log("Activated: " + firstChild.gameObject.name);
+        }
+        else
+        {
+            Debug.LogWarning("No child found to activate under the camera.");
+        }
+        if (dissableCamera)
+        {
+            camera.enabled = false;
+        }
+        else
+        {
+            camera.enabled = true;
+        }
         frame[thisFrame-1].SetActive(false);
         frame[changeTo -1].SetActive(true);
         fade.EndFade();

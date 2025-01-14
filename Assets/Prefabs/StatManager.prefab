@@ -47,5 +47,6 @@ MonoBehaviour:
   health: 100
   maxHealth: 100
   attack: 100
+  agility: 100
   charisma: 100
   money: 0

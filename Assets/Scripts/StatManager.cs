@@ -17,11 +17,11 @@ public class StatManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-
     private void Update()
     {
+        if (health>maxHealth)
         {
-            
+            health = maxHealth;
         }
     }
 }
