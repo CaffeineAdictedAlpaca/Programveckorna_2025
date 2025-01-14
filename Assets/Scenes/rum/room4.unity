@@ -715,6 +715,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RoomTracker
       objectReference: {fileID: 0}
+    - target: {fileID: 4458477064387132448, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5606540494278536287, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
