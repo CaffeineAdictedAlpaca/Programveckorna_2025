@@ -10,6 +10,7 @@ public class ItemPrompt : MonoBehaviour
     [SerializeField] float addAttackPercent;
     [SerializeField] float addHealthPercent;
     [SerializeField] float addCharismaPercent;
+    [SerializeField] float addMaxHealthPercent;
     [SerializeField] int moneyAmount;
     public StatManager statManager;
     public GameObject statDisplay;
@@ -18,6 +19,7 @@ public class ItemPrompt : MonoBehaviour
 
     void Start()
     {
+        addMaxHealthPercent = addMaxHealthPercent / 100;
         addAttackPercent = addAttackPercent / 100;
         addHealthPercent = addHealthPercent / 100;        
         addCharismaPercent = addCharismaPercent / 100;
@@ -64,6 +66,9 @@ public class ItemPrompt : MonoBehaviour
     // Called when Yes is clicked
     public void AcceptItem()
     {
+
+
+
         statDisplay.SetActive(true);
 
         print("You accepted the item!");
@@ -75,6 +80,7 @@ public class ItemPrompt : MonoBehaviour
             statManager.health += statManager.health * addHealthPercent;
             statManager.charisma += statManager.charisma * addCharismaPercent;
             statManager.money += moneyAmount;
+            statManager.maxHealth += statManager.maxHealth * addMaxHealthPercent;
         }
         else
         {

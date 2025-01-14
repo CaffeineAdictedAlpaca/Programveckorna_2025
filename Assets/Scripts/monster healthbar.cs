@@ -7,7 +7,7 @@ public class monsterhealthbar : MonoBehaviour
 {
     public Slider slider;
     public monster monster;
-    //public Gradient gradient;
+    public Gradient gradient;
     public Image fill;
 
     private void Start()
@@ -17,7 +17,7 @@ public class monsterhealthbar : MonoBehaviour
     }
     private void Update()
     {
-        //fill.color = gradient.Evaluate(slider.normalizedValue);
+        fill.color = gradient.Evaluate(slider.normalizedValue);
         slider.value = monster.health;
     }
 }
