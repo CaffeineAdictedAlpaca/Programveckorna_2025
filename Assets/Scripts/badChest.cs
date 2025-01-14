@@ -11,22 +11,18 @@ public class badChest : MonoBehaviour
     public GameObject statDisplay;
     public Button yesButton; // Reference to the Yes button
     public Button noButton; // Reference to the No button
+    [SerializeField] float takeHealthPercent;
 
-    [SerializeField] float attackPercent;
-    [SerializeField] float healthPercent;
-    [SerializeField] float charismaPercent;
-    [SerializeField] int moneyAmount;
     public StatManager statManager;
 
     // Start is called before the first frame update
     void Start()
     {
 
-        attackPercent = attackPercent / 10;
-        healthPercent = healthPercent / 10;
-        charismaPercent = charismaPercent / 10;
-
         statManager = GameObject.FindAnyObjectByType<StatManager>();
+
+        takeHealthPercent = takeHealthPercent / 100;
+
         // Ensure the prompt panel is initially inactive
         if (promptPanel != null)
         {
@@ -70,12 +66,11 @@ public class badChest : MonoBehaviour
     void AcceptItem()
     {
 
-
-
-        statManager.health -= statManager.health * healthPercent;
+        statManager.health -= statManager.health * takeHealthPercent;
 
         statDisplay.SetActive(true);
 
+        
         Debug.Log("You accepted the item!");
         ClosePrompt();
 
@@ -104,10 +99,5 @@ public class badChest : MonoBehaviour
         {
             promptPanel.SetActive(false);
         }
-    }
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
