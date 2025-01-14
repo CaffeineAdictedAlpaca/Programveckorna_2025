@@ -7,8 +7,12 @@ using UnityEngine.UI;
 public class monster : MonoBehaviour
 {
     public float health;
+    public float maxhealth;
     public float attack;
     public float charisma;
+
+    public float timer;
+    public bool start_timer;
 
     public bool Dodge_QTE_start;
     public bool Attack_QTE_start;
@@ -31,9 +35,8 @@ public class monster : MonoBehaviour
     GameObject dodge_window;
     [SerializeField]
     GameObject attack_window;
-
     [SerializeField]
-    TextMeshProUGUI healthtext;
+    GameObject healthtext;
 
     StatManager player;
 
@@ -43,7 +46,7 @@ public class monster : MonoBehaviour
     {
         player = FindAnyObjectByType<StatManager>();
         anim = GetComponent<Animator>();
-        healthtext.enabled = false;
+        healthtext.SetActive(false);
         fight_option.SetActive(false);
         leave_option.SetActive(false);
         attack_option.SetActive(false);
@@ -53,12 +56,13 @@ public class monster : MonoBehaviour
         stick.SetActive(false);
         Dodge_QTE_start = false;
         Attack_QTE_start = false;
+        start_timer = false;
+        timer = 1.5f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        healthtext.text = "" + health;
         if (health<=0)
         {
             Destroy(gameObject);
@@ -67,6 +71,14 @@ public class monster : MonoBehaviour
         if (Dodge_QTE_start == true || Attack_QTE_start == true)
         {
             stick.transform.position += new Vector3(1700, 0, 0) * Time.deltaTime;
+        }
+        if (start_timer == true)
+        {
+            timer -= Time.deltaTime;
+        }
+        if (timer <= 0)
+        {
+            Monster_ATK();
         }
     }
     // Function to call when the object is clicked
@@ -88,7 +100,7 @@ public class monster : MonoBehaviour
     }
     public void Fight()
     {
-        healthtext.enabled = true;
+        healthtext.SetActive(true);
         fight_option.SetActive(false);
         leave_option.SetActive(false);
         attack_option.SetActive(true);
@@ -105,6 +117,13 @@ public class monster : MonoBehaviour
     }
     public void Monster_turn()
     {
+        start_timer = true;
+    }
+    public void Monster_ATK()
+    {
+        timer = 1.5f;
+        print("start");
+        start_timer = false;
         stick.SetActive(true);
         bar.SetActive(true);
         dodge_window.SetActive(true);
