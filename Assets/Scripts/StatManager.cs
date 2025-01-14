@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StatManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class StatManager : MonoBehaviour
     public float agility;
     public float charisma;
     public int money;
+
 
     void Start()
     {
@@ -22,6 +24,12 @@ public class StatManager : MonoBehaviour
         if (health>maxHealth)
         {
             health = maxHealth;
+        }
+
+
+        if (health <= 0)
+        {
+            
         }
     }
 }
