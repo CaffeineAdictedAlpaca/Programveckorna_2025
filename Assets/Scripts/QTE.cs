@@ -20,7 +20,7 @@ public class QTE : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || monster.QTE_miss == true)
         {
             if (monster.Dodge_QTE_start == true)
             {
@@ -34,6 +34,7 @@ public class QTE : MonoBehaviour
                 {
                     print("dodge miss");
                     monster.MonsterATK();
+                    monster.QTE_miss = false;
                 }
             }
             if (monster.Attack_QTE_start == true)
@@ -48,6 +49,7 @@ public class QTE : MonoBehaviour
                 {
                     print("attack miss");
                     monster.QTE_hit();
+                    monster.QTE_miss = false;
                 }
             }
         }

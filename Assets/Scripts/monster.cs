@@ -16,6 +16,7 @@ public class monster : MonoBehaviour
 
     public bool Dodge_QTE_start;
     public bool Attack_QTE_start;
+    public bool QTE_miss;
 
     public Vector2 spawn;
     public Vector2 QTE_spawn;
@@ -56,6 +57,7 @@ public class monster : MonoBehaviour
         stick.SetActive(false);
         Dodge_QTE_start = false;
         Attack_QTE_start = false;
+        QTE_miss = false;
         start_timer = false;
         timer = 1.5f;
     }
@@ -71,6 +73,10 @@ public class monster : MonoBehaviour
         if (Dodge_QTE_start == true || Attack_QTE_start == true)
         {
             stick.transform.position += new Vector3(1700, 0, 0) * Time.deltaTime;
+            if (stick.transform.position.x >= 1700)
+            {
+                QTE_miss = true;
+            }
         }
         if (start_timer == true)
         {
