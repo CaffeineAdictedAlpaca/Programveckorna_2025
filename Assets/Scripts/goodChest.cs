@@ -61,6 +61,7 @@ public class goodChest : MonoBehaviour
     {
 
 
+
         statDisplay.SetActive(true);
 
         chestloot.SetActive(true);
