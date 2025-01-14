@@ -10,13 +10,12 @@ public class ChangeFrame : MonoBehaviour
     [SerializeField] int thisFrame;
     [SerializeField] bool dissableCamera;
     [SerializeField] bool disableSword;
-    GameObject sword;
-    CameraScript camera;
+    CameraScript cameraScript;
 
     private void Start()
     {
         //sword = GameObject.FindGameObjectWithTag("Sword").gameObject;
-        camera = GameObject.FindAnyObjectByType<CameraScript>().GetComponent<CameraScript>();
+        cameraScript = GameObject.FindAnyObjectByType<CameraScript>().GetComponent<CameraScript>();
         fade = GameObject.FindAnyObjectByType<FadeScript>();
     }
 
@@ -36,7 +35,7 @@ public class ChangeFrame : MonoBehaviour
     {
         fade.StartFade();
         yield return new WaitForSeconds(0.4f);
-        GameObject cameraObject = camera.gameObject;
+        GameObject cameraObject = cameraScript.gameObject;
         if (disableSword)
         {
             Transform firstChild = cameraObject.transform.GetChild(0);
@@ -55,11 +54,11 @@ public class ChangeFrame : MonoBehaviour
         }
         if (dissableCamera)
         {
-            camera.enabled = false;
+            cameraScript.enabled = false;
         }
         else
         {
-            camera.enabled = true;
+            cameraScript.enabled = true;
         }
         frame[thisFrame-1].SetActive(false);
         frame[changeTo -1].SetActive(true);
