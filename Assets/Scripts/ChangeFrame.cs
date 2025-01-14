@@ -15,10 +15,11 @@ public class ChangeFrame : MonoBehaviour
 
     private void Start()
     {
-        sword = GameObject.FindGameObjectWithTag("Sword");
+        //sword = GameObject.FindGameObjectWithTag("Sword").gameObject;
         camera = GameObject.FindAnyObjectByType<CameraScript>().GetComponent<CameraScript>();
         fade = GameObject.FindAnyObjectByType<FadeScript>();
     }
+
     // Function to call when the object is clicked
     public void OnObjectClicked()
     {
@@ -34,14 +35,23 @@ public class ChangeFrame : MonoBehaviour
     public IEnumerator Change()
     {
         fade.StartFade();
-        // Wait (adjust duration as needed)
+        yield return new WaitForSeconds(0.4f);
+        GameObject cameraObject = camera.gameObject;
         if (disableSword)
         {
-            sword.SetActive(false);
+            Transform firstChild = cameraObject.transform.GetChild(0);
+            firstChild.gameObject.SetActive(false);
+            Debug.Log("Activated: " + firstChild.gameObject.name);
+        }
+        else if (cameraObject.transform.childCount > 0)
+        {
+            Transform firstChild = cameraObject.transform.GetChild(0);
+            firstChild.gameObject.SetActive(true);
+            Debug.Log("Activated: " + firstChild.gameObject.name);
         }
         else
         {
-            sword.SetActive(true);
+            Debug.LogWarning("No child found to activate under the camera.");
         }
         if (dissableCamera)
         {
@@ -51,7 +61,6 @@ public class ChangeFrame : MonoBehaviour
         {
             camera.enabled = true;
         }
-        yield return new WaitForSeconds(0.4f);
         frame[thisFrame-1].SetActive(false);
         frame[changeTo -1].SetActive(true);
         fade.EndFade();
