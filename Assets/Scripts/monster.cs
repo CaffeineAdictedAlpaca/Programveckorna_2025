@@ -44,6 +44,7 @@ public class monster : MonoBehaviour
     swing swing;
 
     Animator anim;
+    SpriteRenderer sprite;
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +52,7 @@ public class monster : MonoBehaviour
         smol = FindAnyObjectByType<smol_monster>();
         player = FindAnyObjectByType<StatManager>();
         anim = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
         healthtext.SetActive(false);
         fight_option.SetActive(false);
         leave_option.SetActive(false);
@@ -184,5 +186,14 @@ public class monster : MonoBehaviour
         dodge_window.SetActive(false);
         stick.SetActive(false);
         anim.SetTrigger("MonsterATK");
+    }
+
+    public void red()
+    {
+        sprite.color = Color.red;
+    }
+    public void white()
+    {
+        sprite.color = Color.white;
     }
 }
