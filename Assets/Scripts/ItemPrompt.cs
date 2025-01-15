@@ -12,8 +12,8 @@ public class ItemPrompt : MonoBehaviour
     [SerializeField] float addCharismaPercent;
     [SerializeField] float addMaxHealthPercent;
     [SerializeField] int moneyAmount;
-    StatManager statManager;
-    GameObject statDisplay;
+    public StatManager statManager;
+    public GameObject statDisplay;
 
 
 
@@ -28,7 +28,7 @@ public class ItemPrompt : MonoBehaviour
 
 
         statDisplay = GameObject.FindAnyObjectByType<UIManager>().gameObject;
-        statManager = GameObject.FindAnyObjectByType<StatManager>();
+        statManager = GameObject.FindAnyObjectByType<StatManager>().GetComponent<StatManager>();
 
         // Ensure the prompt panel is initially inactive
         if (promptPanel != null)
