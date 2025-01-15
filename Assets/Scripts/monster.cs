@@ -76,6 +76,7 @@ public class monster : MonoBehaviour
         }
         if (health<=0)
         {
+            FindAnyObjectByType<CameraScript>().enabled = true;
             Destroy(gameObject);
         }
 
