@@ -33,8 +33,11 @@ public class RoomTracker : MonoBehaviour
     }
     public void LoadNextScene()
     {
-        SceneManager.LoadScene(scrambledScenes[roomIndex]);
-        roomIndex++;
+        if(roomIndex < scrambledScenes.Count)
+        {
+            SceneManager.LoadScene(scrambledScenes[roomIndex]);
+            roomIndex++;
+        }
     }
 
     private List<string> ScrambleScenes(List<string> scenes, List<int> fixedIndices)
