@@ -40,11 +40,13 @@ public class monster : MonoBehaviour
     GameObject healthtext;
 
     StatManager player;
+    smol_monster smol;
 
     Animator anim;
     // Start is called before the first frame update
     void Start()
     {
+        smol = FindAnyObjectByType<smol_monster>();
         player = FindAnyObjectByType<StatManager>();
         anim = GetComponent<Animator>();
         healthtext.SetActive(false);
@@ -65,6 +67,11 @@ public class monster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (smol.talking == true)
+        {
+            talk();
+            smol.talking = false;
+        }
         if (health<=0)
         {
             Destroy(gameObject);
@@ -88,21 +95,9 @@ public class monster : MonoBehaviour
         }
     }
     // Function to call when the object is clicked
-    public void OnObjectClicked()
-    {
-        talk();
-    }
-
-    private void OnMouseDown()
-    {
-        // Detect mouse click on the object's collider
-        if (FindAnyObjectByType<CameraScript>().enabled == true)
-        {
-            OnObjectClicked();
-        }
-    }
     public void talk()
     {
+        print("talk");
         FindAnyObjectByType<CameraScript>().enabled = false;
         fight_option.SetActive(true);
         leave_option.SetActive(true);
@@ -119,6 +114,7 @@ public class monster : MonoBehaviour
         FindAnyObjectByType<CameraScript>().enabled = true;
         fight_option.SetActive(false);
         leave_option.SetActive(false);
+        gameObject.SetActive(false);
     }
     public void Player_turn()
     {
