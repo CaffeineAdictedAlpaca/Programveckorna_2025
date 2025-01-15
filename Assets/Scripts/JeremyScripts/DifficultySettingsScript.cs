@@ -50,8 +50,8 @@ public class DifficultySettingsScript : MonoBehaviour
                     break;
 
                 case Difficulty.Normal:
-                    statManager.maxHealth = 150;
-                    statManager.health = 150;
+                    statManager.maxHealth = 100;
+                    statManager.health = 100;
                     statManager.attack = 100;
                     statManager.agility = 100;
                     statManager.charisma = 100;
@@ -59,11 +59,11 @@ public class DifficultySettingsScript : MonoBehaviour
                     break;
 
                 case Difficulty.Hard:
-                    statManager.maxHealth = 150;
-                    statManager.health = 150;
-                    statManager.attack = 100;
+                    statManager.maxHealth = 75;
+                    statManager.health = 75;
+                    statManager.attack = 75;
                     statManager.agility = 50;
-                    statManager.charisma = 100  ;
+                    statManager.charisma = 75  ;
                     statManager.money = 100;
                     break;
             }
