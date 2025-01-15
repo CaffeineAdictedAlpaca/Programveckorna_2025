@@ -29,7 +29,7 @@ public class StatManager : MonoBehaviour
 
         if (health <= 0)
         {
-            
+            SceneManager.LoadSceneAsync(0);
         }
     }
 }
