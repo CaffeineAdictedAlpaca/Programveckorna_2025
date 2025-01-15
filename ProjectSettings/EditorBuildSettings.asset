@@ -12,16 +12,16 @@ EditorBuildSettings:
     path: Assets/Scenes/rum/Start.unity
     guid: db08850b85c6d20478a83a1288b6c602
   - enabled: 1
-    path: Assets/Scenes/rum/room2.unity
+    path: Assets/Scenes/rum/2.unity
     guid: 6516971ccfdb7884d96b0581c9847beb
   - enabled: 1
-    path: Assets/Scenes/rum/room4.unity
+    path: Assets/Scenes/rum/4.unity
     guid: 4790dd172f537f84aa4c47ed8ecac7bd
   - enabled: 1
-    path: Assets/Scenes/rum/room1.unity
+    path: Assets/Scenes/rum/1.unity
     guid: 717a2340fcf34a1458e5a6ee85ab643b
   - enabled: 1
-    path: Assets/Scenes/rum/room 3.unity
+    path: Assets/Scenes/rum/3.unity
     guid: a7eeb3979c56e4344bf7e5fc0142e20f
   - enabled: 1
     path: Assets/Scenes/Santi.unity
