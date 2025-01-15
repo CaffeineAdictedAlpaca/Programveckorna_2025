@@ -96,7 +96,10 @@ public class monster : MonoBehaviour
     private void OnMouseDown()
     {
         // Detect mouse click on the object's collider
-        OnObjectClicked();
+        if (FindAnyObjectByType<CameraScript>().enabled == true)
+        {
+            OnObjectClicked();
+        }
     }
     public void talk()
     {
