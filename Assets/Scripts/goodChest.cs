@@ -8,7 +8,7 @@ public class goodChest : MonoBehaviour
 
     public GameObject item; // Reference to the item GameObject
     public GameObject promptPanel; // Reference to the prompt panel UI
-    public GameObject statDisplay;
+    
     public Button yesButton; // Reference to the Yes button
     public Button noButton; // Reference to the No button
 
@@ -55,7 +55,7 @@ public class goodChest : MonoBehaviour
     public void ShowPrompt()
     {
 
-        statDisplay.SetActive(false);
+
         if (promptPanel != null)
         {
             promptPanel.SetActive(true);
@@ -67,7 +67,7 @@ public class goodChest : MonoBehaviour
 
         StartCoroutine(changeFrame.Change());
 
-        statDisplay.SetActive(true);
+        
 
         chestloot.SetActive(true);
         Debug.Log("You accepted the item!");
@@ -81,7 +81,7 @@ public class goodChest : MonoBehaviour
     void DeclineItem()
     {
 
-        statDisplay.SetActive(true);
+        
         Debug.Log("You declined the item.");
 
 

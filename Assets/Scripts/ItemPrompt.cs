@@ -13,7 +13,7 @@ public class ItemPrompt : MonoBehaviour
     [SerializeField] float addMaxHealthPercent;
     [SerializeField] int moneyAmount;
     public StatManager statManager;
-    public GameObject statDisplay;
+    GameObject statDisplay;
 
 
 
