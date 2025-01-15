@@ -12,7 +12,7 @@ public class ItemPrompt : MonoBehaviour
     [SerializeField] float addCharismaPercent;
     [SerializeField] float addMaxHealthPercent;
     [SerializeField] int moneyAmount;
-    public StatManager statManager;
+    StatManager statManager;
     GameObject statDisplay;
 
 

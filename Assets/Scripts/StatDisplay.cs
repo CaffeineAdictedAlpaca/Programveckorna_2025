@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI charismaText;
     public TextMeshProUGUI moneyText;
 
-    private StatManager statManager;
+    StatManager statManager;
 
     void Start()
     {

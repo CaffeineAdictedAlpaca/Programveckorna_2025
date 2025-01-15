@@ -13,7 +13,7 @@ public class badChest : MonoBehaviour
     public Button noButton; // Reference to the No button
     [SerializeField] float takeMaxHealthPercent;
 
-    public StatManager statManager;
+    StatManager statManager;
 
     // Start is called before the first frame update
     void Start()
