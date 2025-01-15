@@ -11,7 +11,7 @@ public class badChest : MonoBehaviour
     public GameObject statDisplay;
     public Button yesButton; // Reference to the Yes button
     public Button noButton; // Reference to the No button
-    [SerializeField] float takeHealthPercent;
+    [SerializeField] float takeMaxHealthPercent;
 
     public StatManager statManager;
 
@@ -21,7 +21,7 @@ public class badChest : MonoBehaviour
 
         statManager = GameObject.FindAnyObjectByType<StatManager>();
 
-        takeHealthPercent = takeHealthPercent / 100;
+        takeMaxHealthPercent = takeMaxHealthPercent / 100;
 
         // Ensure the prompt panel is initially inactive
         if (promptPanel != null)
@@ -66,7 +66,7 @@ public class badChest : MonoBehaviour
     void AcceptItem()
     {
 
-        statManager.health -= statManager.health * takeHealthPercent;
+        statManager.maxHealth -= statManager.health * takeMaxHealthPercent;
 
         statDisplay.SetActive(true);
 
