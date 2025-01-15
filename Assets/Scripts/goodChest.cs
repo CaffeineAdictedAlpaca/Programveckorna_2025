@@ -14,9 +14,12 @@ public class goodChest : MonoBehaviour
 
     public GameObject chestloot;
 
+    [SerializeField] ChangeChest changeFrame;
+
     // Start is called before the first frame update
     void Start()
     {
+
         // Ensure the prompt panel is initially inactive
         if (promptPanel != null)
         {
@@ -38,13 +41,15 @@ public class goodChest : MonoBehaviour
     {
         ShowPrompt();
 
-
     }
 
     private void OnMouseDown()
     {
         // Detect mouse click on the object's collider
         OnObjectClicked();
+
+
+        
     }
     // Called when the button below the item is pressed
     public void ShowPrompt()
@@ -60,7 +65,7 @@ public class goodChest : MonoBehaviour
     void AcceptItem()
     {
 
-
+        StartCoroutine(changeFrame.Change());
 
         statDisplay.SetActive(true);
 
