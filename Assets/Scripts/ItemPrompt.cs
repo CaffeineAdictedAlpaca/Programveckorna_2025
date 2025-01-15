@@ -14,6 +14,7 @@ public class ItemPrompt : MonoBehaviour
     [SerializeField] int moneyAmount;
     public StatManager statManager;
     public GameObject statDisplay;
+    public GameObject gameUI;
 
 
 
@@ -26,9 +27,9 @@ public class ItemPrompt : MonoBehaviour
 
 
 
-
-        statDisplay = GameObject.FindAnyObjectByType<UIManager>().gameObject;
-        statManager = GameObject.FindAnyObjectByType<StatManager>();
+        gameUI = GameObject.FindAnyObjectByType<UI>().gameObject;
+        statDisplay = gameUI.transform.GetChild(1).gameObject;
+        statManager = GameObject.FindAnyObjectByType<StatManager>().GetComponent<StatManager>();
 
         // Ensure the prompt panel is initially inactive
         if (promptPanel != null)
