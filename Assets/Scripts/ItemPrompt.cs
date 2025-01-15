@@ -11,21 +11,18 @@ public class ItemPrompt : MonoBehaviour
     [SerializeField] float addHealthPercent;
     [SerializeField] float addCharismaPercent;
     [SerializeField] float addMaxHealthPercent;
-    [SerializeField] int moneyAmount;
+    [SerializeField] int minMoneyAmount = 1; // Minimum money amount
+    [SerializeField] int maxMoneyAmount = 200; // Maximum money amount
     public StatManager statManager;
     public GameObject statDisplay;
     public GameObject gameUI;
-
-
 
     void Start()
     {
         addMaxHealthPercent = addMaxHealthPercent / 100;
         addAttackPercent = addAttackPercent / 100;
-        addHealthPercent = addHealthPercent / 100;        
+        addHealthPercent = addHealthPercent / 100;
         addCharismaPercent = addCharismaPercent / 100;
-
-
 
         gameUI = GameObject.FindAnyObjectByType<UI>().gameObject;
         statDisplay = gameUI.transform.GetChild(1).gameObject;
@@ -36,15 +33,12 @@ public class ItemPrompt : MonoBehaviour
         {
             promptPanel.SetActive(false);
         }
-
-        
     }
+
     // Function to call when the object is clicked
     public void OnObjectClicked()
     {
         ShowPrompt();
-
-        
     }
 
     private void OnMouseDown()
@@ -52,10 +46,10 @@ public class ItemPrompt : MonoBehaviour
         // Detect mouse click on the object's collider
         OnObjectClicked();
     }
+
     // Called when the button below the item is pressed
     public void ShowPrompt()
     {
-
         statDisplay.SetActive(false);
 
         if (promptPanel != null)
@@ -67,20 +61,22 @@ public class ItemPrompt : MonoBehaviour
     // Called when Yes is clicked
     public void AcceptItem()
     {
-
-
-
         statDisplay.SetActive(true);
 
-        print("You accepted the item!");
+        Debug.Log("You accepted the item!");
         ClosePrompt();
 
         if (statManager != null)
         {
-            statManager.attack += statManager.attack * addAttackPercent; // Increase attack by addAttakPercent;
+            statManager.attack += statManager.attack * addAttackPercent; // Increase attack by addAttackPercent;
             statManager.health += statManager.health * addHealthPercent;
             statManager.charisma += statManager.charisma * addCharismaPercent;
-            statManager.money += moneyAmount;
+
+            // Generate a random amount of money and add it
+            int randomMoney = Random.Range(minMoneyAmount, maxMoneyAmount + 1);
+            statManager.money += randomMoney;
+            Debug.Log($"You received {randomMoney} money!");
+
             statManager.maxHealth += statManager.maxHealth * addMaxHealthPercent;
         }
         else
@@ -88,7 +84,6 @@ public class ItemPrompt : MonoBehaviour
             Debug.LogWarning("StatManager not found!");
         }
         Destroy(gameObject);
-
     }
 
     // Called when No is clicked
@@ -97,12 +92,7 @@ public class ItemPrompt : MonoBehaviour
         statDisplay.SetActive(true);
 
         Debug.Log("You declined the item.");
-
-        
-
         ClosePrompt();
-
-
     }
 
     // Hides the prompt panel
