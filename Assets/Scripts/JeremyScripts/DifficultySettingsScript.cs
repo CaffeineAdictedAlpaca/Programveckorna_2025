@@ -46,7 +46,7 @@ public class DifficultySettingsScript : MonoBehaviour
                     statManager.attack = 100;
                     statManager.agility = 300;
                     statManager.charisma = 200;
-                    statManager.money = 500;
+                    statManager.money = 0;
                     break;
 
                 case Difficulty.Normal:
@@ -55,7 +55,7 @@ public class DifficultySettingsScript : MonoBehaviour
                     statManager.attack = 100;
                     statManager.agility = 100;
                     statManager.charisma = 100;
-                    statManager.money = 300;
+                    statManager.money = 0;
                     break;
 
                 case Difficulty.Hard:
@@ -63,8 +63,8 @@ public class DifficultySettingsScript : MonoBehaviour
                     statManager.health = 75;
                     statManager.attack = 75;
                     statManager.agility = 50;
-                    statManager.charisma = 75  ;
-                    statManager.money = 100;
+                    statManager.charisma = 75;
+                    statManager.money = 0;
                     break;
             }
 
