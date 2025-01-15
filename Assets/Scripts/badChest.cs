@@ -8,17 +8,17 @@ public class badChest : MonoBehaviour
 
     public GameObject item; // Reference to the item GameObject
     public GameObject promptPanel; // Reference to the prompt panel UI
-    public GameObject statDisplay;
+    GameObject statDisplay;
     public Button yesButton; // Reference to the Yes button
     public Button noButton; // Reference to the No button
     [SerializeField] float takeMaxHealthPercent;
 
-    public StatManager statManager;
+    StatManager statManager;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        statDisplay = GameObject.FindAnyObjectByType<UIManager>().gameObject;
         statManager = GameObject.FindAnyObjectByType<StatManager>();
 
         takeMaxHealthPercent = takeMaxHealthPercent / 100;

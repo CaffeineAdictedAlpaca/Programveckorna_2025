@@ -10,13 +10,16 @@ public class ChangeFrame : MonoBehaviour
     [SerializeField] int thisFrame;
     [SerializeField] bool dissableCamera;
     [SerializeField] bool disableSword;
+    [SerializeField] bool disableUI;
     CameraScript cameraScript;
+    GameObject UI;
 
     private void Start()
     {
         //sword = GameObject.FindGameObjectWithTag("Sword").gameObject;
         cameraScript = GameObject.FindAnyObjectByType<CameraScript>().GetComponent<CameraScript>();
         fade = GameObject.FindAnyObjectByType<FadeScript>();
+        UI = GameObject.FindAnyObjectByType<UI>().gameObject;
     }
 
     // Function to call when the object is clicked
@@ -51,6 +54,22 @@ public class ChangeFrame : MonoBehaviour
         else
         {
             Debug.LogWarning("No child found to activate under the camera.");
+        }
+        if (disableUI)
+        {
+            Transform child = UI.transform.GetChild(1);
+            child.gameObject.SetActive(false);
+            Debug.Log("Activated: " + child.gameObject.name);
+        }
+        else if(UI.transform.childCount > 0)
+        {
+            Transform child = UI.transform.GetChild(1);
+            child.gameObject.SetActive(true);
+            Debug.Log("Activated: " + child.gameObject.name);
+        }
+        else
+        {
+            Debug.LogWarning("No child found to activate under the GameUI.");
         }
         if (dissableCamera)
         {
