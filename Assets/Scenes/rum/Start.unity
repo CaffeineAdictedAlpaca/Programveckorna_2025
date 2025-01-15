@@ -338,7 +338,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
       propertyPath: sceneNames.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
       propertyPath: fixedIndices.Array.size
@@ -346,23 +346,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
       propertyPath: sceneNames.Array.data[0]
-      value: monster fight
+      value: Room1
       objectReference: {fileID: 0}
     - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
       propertyPath: sceneNames.Array.data[1]
-      value: room4
+      value: Room2
       objectReference: {fileID: 0}
     - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
       propertyPath: sceneNames.Array.data[2]
       value: monster fight
       objectReference: {fileID: 0}
     - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
+      propertyPath: fixedIndices.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
       propertyPath: fixedIndices.Array.data[1]
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
       propertyPath: fixedIndices.Array.data[2]
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4458477064387132448, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
       propertyPath: m_Name
