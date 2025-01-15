@@ -41,14 +41,18 @@ public class monster : MonoBehaviour
 
     StatManager player;
     smol_monster smol;
+    swing swing;
 
     Animator anim;
+    SpriteRenderer sprite;
     // Start is called before the first frame update
     void Start()
     {
+        swing = FindAnyObjectByType<swing>();
         smol = FindAnyObjectByType<smol_monster>();
         player = FindAnyObjectByType<StatManager>();
         anim = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
         healthtext.SetActive(false);
         fight_option.SetActive(false);
         leave_option.SetActive(false);
@@ -74,6 +78,7 @@ public class monster : MonoBehaviour
         }
         if (health<=0)
         {
+            FindAnyObjectByType<CameraScript>().enabled = true;
             Destroy(gameObject);
         }
 
@@ -142,6 +147,7 @@ public class monster : MonoBehaviour
     {
         health -= player.attack;
         anim.SetTrigger("PlayerATK");
+        swing.anim();
         bar.SetActive(false);
         attack_window.SetActive(false);
         stick.SetActive(false);
@@ -172,6 +178,7 @@ public class monster : MonoBehaviour
         attack_window.SetActive(false);
         stick.SetActive(false);
         anim.SetTrigger("PlayerATK");
+        swing.anim();
     }
     public void QTE_dodge()
     {
@@ -179,5 +186,14 @@ public class monster : MonoBehaviour
         dodge_window.SetActive(false);
         stick.SetActive(false);
         anim.SetTrigger("MonsterATK");
+    }
+
+    public void red()
+    {
+        sprite.color = Color.red;
+    }
+    public void white()
+    {
+        sprite.color = Color.white;
     }
 }

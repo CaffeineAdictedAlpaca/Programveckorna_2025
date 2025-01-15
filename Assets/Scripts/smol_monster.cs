@@ -23,15 +23,8 @@ public class smol_monster : MonoBehaviour
     }
     public void OnObjectClicked()
     {
-        if (FindAnyObjectByType<CameraScript>().enabled == true)
-        {
-            dialogue.SetActive(true);
-            talking = true;
-        }
-        else
-        {
-            talking = false;
-        }
+        dialogue.SetActive(true);
+        talking = true;
     }
 
     private void OnMouseDown()
