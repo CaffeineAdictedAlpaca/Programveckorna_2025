@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class RoomTracker : MonoBehaviour
 {
+    int roomIndex;
+
     [Tooltip("List of scene names to scramble. Ensure all scenes are added to the Build Settings.")]
     public List<string> sceneNames = new List<string>();
 
@@ -31,7 +33,8 @@ public class RoomTracker : MonoBehaviour
     }
     public void LoadNextScene()
     {
-        SceneManager.LoadScene(scrambledScenes[0]);
+        SceneManager.LoadScene(scrambledScenes[roomIndex]);
+        roomIndex++;
     }
 
     private List<string> ScrambleScenes(List<string> scenes, List<int> fixedIndices)
