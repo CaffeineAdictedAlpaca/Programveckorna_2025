@@ -13,11 +13,13 @@ public class ChangeFrame : MonoBehaviour
     [SerializeField] bool disableUI;
     CameraScript cameraScript;
     GameObject UI;
+    GameObject camera;
 
     private void Start()
     {
         //sword = GameObject.FindGameObjectWithTag("Sword").gameObject;
         cameraScript = GameObject.FindAnyObjectByType<CameraScript>().GetComponent<CameraScript>();
+        camera = GameObject.FindAnyObjectByType<CameraScript>().gameObject;
         fade = GameObject.FindAnyObjectByType<FadeScript>();
         UI = GameObject.FindAnyObjectByType<UI>().gameObject;
     }
@@ -79,6 +81,7 @@ public class ChangeFrame : MonoBehaviour
         {
             cameraScript.enabled = true;
         }
+        camera.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         frame[thisFrame-1].SetActive(false);
         frame[changeTo -1].SetActive(true);
         fade.EndFade();
