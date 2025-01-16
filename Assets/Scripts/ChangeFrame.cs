@@ -38,8 +38,9 @@ public class ChangeFrame : MonoBehaviour
 
     public IEnumerator Change()
     {
-        fade.StartFade();
-        yield return new WaitForSeconds(0.4f);
+        StartCoroutine(fade.FadeOut());
+        yield return StartCoroutine(fade.FadeOut());
+        yield return new WaitForSeconds(0.1f);
         GameObject cameraObject = cameraScript.gameObject;
         if (disableSword)
         {
