@@ -6884,6 +6884,8 @@ MonoBehaviour:
   - Hello and welcome to our game test! This is a tutorial on how to play, left click
     to skip dialogue.
   - Left click to interact with objects.
+  - When you feel that you are done in this room, left click on the door to go to
+    the next room.
   textSpeed: 0.03
 --- !u!114 &1862877596625035148
 MonoBehaviour:
