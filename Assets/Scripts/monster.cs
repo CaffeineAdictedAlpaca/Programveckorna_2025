@@ -38,22 +38,24 @@ public class monster : MonoBehaviour
     [SerializeField]
     GameObject fight_option;
     [SerializeField]
-    GameObject persuade_option;
-    [SerializeField]
     GameObject attack_option;
-
-    [SerializeField]
-    GameObject start;
-    [SerializeField]
-    GameObject fight;
     [SerializeField]
     GameObject defend_option;
     [SerializeField]
     GameObject persuade_succes_option;
     [SerializeField]
     GameObject persuade_fail_option;
+
     [SerializeField]
-    GameObject fail;
+    GameObject start;
+    [SerializeField]
+    GameObject fight;
+    [SerializeField]
+    GameObject defend;
+    [SerializeField]
+    GameObject persuade_succes;
+    [SerializeField]
+    GameObject persuade_fail;
     [SerializeField]
     GameObject hit_succes;
     [SerializeField]
@@ -67,18 +69,20 @@ public class monster : MonoBehaviour
     smol_monster smol;
     swing swing;
     public Image player_screen;
+    public Text chari;
 
     Animator anim;
     SpriteRenderer sprite;
     // Start is called before the first frame update
     void Start()
     {
+        defend.SetActive(false);
         start.SetActive(false);
         fight.SetActive(false);
         defend_option.SetActive(false);
         persuade_succes_option.SetActive(false);
         persuade_fail_option.SetActive(false);
-        fail.SetActive(false);
+        persuade_fail.SetActive(false);
         hit_succes.SetActive(false);
         hit_miss.SetActive(false);
         dodge_succes.SetActive(false);
@@ -90,7 +94,7 @@ public class monster : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         healthtext.SetActive(false);
         fight_option.SetActive(false);
-        persuade_option.SetActive(false);
+        persuade_succes.SetActive(false);
         attack_option.SetActive(false);
         bar.SetActive(false);
         attack_window.SetActive(false);
@@ -112,12 +116,16 @@ public class monster : MonoBehaviour
     {
         if (player.charisma < 150)
         {
-            persuade_succes_option.GetComponent<Text>().color = Color.red;
+            chari.color = Color.red;
         }
         if (smol.talking == true)
         {
-            talk();
-            smol.talking = false;
+            if (talked == false)
+            {
+                Talk();
+                smol.talking = false;
+                talked = true;
+            }
         }
         if (health<=0)
         {
@@ -143,7 +151,7 @@ public class monster : MonoBehaviour
         }
     }
     // Function to call when the object is clicked
-    public void talk()
+    public void Talk()
     {
         print("talk");
         FindAnyObjectByType<CameraScript>().enabled = false;
@@ -153,6 +161,8 @@ public class monster : MonoBehaviour
     }
     public void Defend()
     {
+        print("defend");
+        defend.SetActive(true);
         fight_option.SetActive(false);
         defend_option.SetActive(false);
         persuade_succes_option.SetActive(true);
@@ -160,36 +170,31 @@ public class monster : MonoBehaviour
     }
     public void Fight()
     {
+        print("fight");
         fight.SetActive(true);
         healthtext.SetActive(true);
         fight_option.SetActive(false);
-        persuade_option.SetActive(false);
+        defend_option.SetActive(false);
         attack_option.SetActive(true);
     }
-    public void persuade_succes()
+    public void Persuade_succes()
     {
-        if (player.charisma > 150)
+        if (player.charisma >= 150)
         {
-            persuade_succes_option.SetActive(true);
-        }
-        else
-        {
-            persuade_fail_option.SetActive(true);
-            fail.SetActive(true);
-            healthtext.SetActive(true);
-            fight_option.SetActive(false);
-            persuade_option.SetActive(false);
-            attack_option.SetActive(true);
+            persuade_succes_option.SetActive(false);
+            persuade_fail_option.SetActive(false);
+            persuade_succes.SetActive(true);
+            print("good ending");
         }
     }
-    public void persuade_fail()
+    public void Persuade_fail()
     {
-        persuade_fail_option.SetActive(true);
-        fail.SetActive(true);
+        persuade_succes_option.SetActive(false);
+        persuade_fail_option.SetActive(false);
+        persuade_fail.SetActive(true);
         healthtext.SetActive(true);
-        fight_option.SetActive(false);
-        persuade_option.SetActive(false);
         attack_option.SetActive(true);
+        print("fight");
     }
     public void Player_turn()
     {
@@ -239,6 +244,8 @@ public class monster : MonoBehaviour
         dodge_window.transform.localScale = new Vector3(player.agility * 0.008f, 0.74163f, 0);
         stick.transform.position = spawn;
         Dodge_QTE_start = true;
+        hit_miss.SetActive(false);
+        hit_succes.SetActive(false);
     }
 
     public void QTE_attacking()
@@ -251,6 +258,8 @@ public class monster : MonoBehaviour
         stick.SetActive(true);
         stick.transform.position = spawn;
         Attack_QTE_start = true;
+        dodge_miss.SetActive(false);
+        dodge_succes.SetActive(false);
     }
     public void QTE_hit()
     {

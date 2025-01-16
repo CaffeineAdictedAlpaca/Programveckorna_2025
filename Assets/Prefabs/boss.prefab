@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6099430603774789997}
   - component: {fileID: 1508763402264407393}
   m_Layer: 31
-  m_Name: persuade
+  m_Name: persuade fail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 213.73639, y: -12.517527}
-  m_SizeDelta: {x: 1472.8728, y: 138.23505}
+  m_AnchoredPosition: {x: 187.98132, y: -12.517527}
+  m_SizeDelta: {x: 1524.3826, y: 138.23505}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6099430603774789997
 CanvasRenderer:
@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: persuade
+  m_Text: y-your teachings
 --- !u!1 &647360391119155860
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,7 +91,7 @@ GameObject:
   - component: {fileID: 6958706111484100802}
   - component: {fileID: 6556414287684596419}
   m_Layer: 31
-  m_Name: fight
+  m_Name: defend
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,8 +113,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 139.53302, y: -14.214094}
-  m_SizeDelta: {x: 840.86597, y: 141.42819}
+  m_AnchoredPosition: {x: 29.608551, y: -16}
+  m_SizeDelta: {x: 824.0829, y: 141.42819}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6958706111484100802
 CanvasRenderer:
@@ -146,7 +146,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 585188cdc4600544eb408bee749e4b3a, type: 3}
-    m_FontSize: 100
+    m_FontSize: 93
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -157,9 +157,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'fight
-
-'
+  m_Text: '"I bring no bad intentions"'
 --- !u!1 &733484726167066527
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,9 +319,10 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8892921132457470168}
-  - {fileID: 832085645379874020}
+  - {fileID: 4439858475351381621}
   - {fileID: 667596617531358729}
+  - {fileID: 832085645379874020}
+  - {fileID: 8892921132457470168}
   - {fileID: 7232597303482447101}
   - {fileID: 2858639964987553257}
   - {fileID: 6830243507308799643}
@@ -333,7 +332,6 @@ RectTransform:
   - {fileID: 2838310392742921718}
   - {fileID: 7292921258560896244}
   - {fileID: 4153918899841602868}
-  - {fileID: 4439858475351381621}
   m_Father: {fileID: 1084394388500785638}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -460,85 +458,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 913c6d21c5918b3449d63a576e522d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &2364652628832148188
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8434709588613103614}
-  - component: {fileID: 3121665020043666247}
-  - component: {fileID: 7359312713805473369}
-  m_Layer: 31
-  m_Name: too low
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &8434709588613103614
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2364652628832148188}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1589390259192939556}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.11590576, y: -64.23496}
-  m_SizeDelta: {x: -0.079956055, y: -44.30002}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &3121665020043666247
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2364652628832148188}
-  m_CullTransparentMesh: 1
---- !u!114 &7359312713805473369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2364652628832148188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 585188cdc4600544eb408bee749e4b3a, type: 3}
-    m_FontSize: 51
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 117
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: need 150 charisma
 --- !u!1 &2607937676409169050
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,12 +571,13 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1589390259192939556}
+  - {fileID: 7997284197818199092}
   m_Father: {fileID: 3362782517972208064}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -325.9, y: -419.1}
-  m_SizeDelta: {x: 167.4, y: 30}
+  m_AnchoredPosition: {x: -416, y: -405}
+  m_SizeDelta: {x: 304.5, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &9052079127117843559
 CanvasRenderer:
@@ -743,7 +663,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3713202036071147588}
         m_TargetAssemblyTypeName: monster, Assembly-CSharp
-        m_MethodName: persuade_succes
+        m_MethodName: Persuade_succes
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -955,7 +875,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4165277626554146559
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1141,15 +1061,15 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.9000003, y: 2.9000003, z: 2.9000003}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4114451591521245460}
   m_Father: {fileID: 3362782517972208064}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -325.9, y: -419.1}
-  m_SizeDelta: {x: 167.4, y: 30}
+  m_AnchoredPosition: {x: 443, y: -405}
+  m_SizeDelta: {x: 264.3, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1302134938189452416
 CanvasRenderer:
@@ -1235,7 +1155,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3713202036071147588}
         m_TargetAssemblyTypeName: monster, Assembly-CSharp
-        m_MethodName: persuade_fail
+        m_MethodName: Persuade_fail
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1453,7 +1373,7 @@ GameObject:
   - component: {fileID: 430776996057681796}
   - component: {fileID: 2319414704203816740}
   m_Layer: 31
-  m_Name: persuade
+  m_Name: persuade succes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1470,14 +1390,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.34482753, y: 0.34482753, z: 0.34482753}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8434709588613103614}
+  m_Children: []
   m_Father: {fileID: 832085645379874020}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 213.73639, y: -12.517527}
-  m_SizeDelta: {x: 1472.8728, y: 138.23505}
+  m_AnchoredPosition: {x: -0, y: -12.517527}
+  m_SizeDelta: {x: 505.80005, y: 138.23505}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &430776996057681796
 CanvasRenderer:
@@ -1520,7 +1439,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: persuade
+  m_Text: Your teachings sir
 --- !u!1 &6407781040115133700
 GameObject:
   m_ObjectHideFlags: 0
@@ -1535,7 +1454,7 @@ GameObject:
   - component: {fileID: 6191067826642862834}
   - component: {fileID: 8602587066855691515}
   m_Layer: 0
-  m_Name: monster
+  m_Name: boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1641,19 +1560,21 @@ MonoBehaviour:
   attack_window: {fileID: 8830989378847251786}
   healthtext: {fileID: 1557561904512671887}
   fight_option: {fileID: 733484726167066527}
-  persuade_option: {fileID: 3010351604610815890}
   attack_option: {fileID: 3730660629761876246}
+  defend_option: {fileID: 7671877557118724159}
+  persuade_succes_option: {fileID: 3010351604610815890}
+  persuade_fail_option: {fileID: 4107357108926100219}
   start: {fileID: 2771833529691203861}
   fight: {fileID: 7314746168734869505}
-  defend_option: {fileID: 0}
-  persuade_succes_option: {fileID: 0}
-  persuade_fail_option: {fileID: 0}
-  fail: {fileID: 4194203022110406608}
+  defend: {fileID: 2081007508830894963}
+  persuade_succes: {fileID: 165398199143417617}
+  persuade_fail: {fileID: 4194203022110406608}
   hit_succes: {fileID: 1513071768688497062}
   hit_miss: {fileID: 7299045569576294430}
   dodge_succes: {fileID: 2818538938034856220}
   dodge_miss: {fileID: 8902895452229273820}
   player_screen: {fileID: 4639222611829261588}
+  chari: {fileID: 2319414704203816740}
 --- !u!70 &6191067826642862834
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1746,8 +1667,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 590.5996, y: -409.55005}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -245, y: -409.55005}
+  m_SizeDelta: {x: 374.7, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6462168561766804619
 CanvasRenderer:
@@ -1779,7 +1700,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 430e1ab8ba8c42543affbaf556585cdc, type: 3}
   m_Type: 0
-  m_PreserveAspect: 1
+  m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1833,7 +1754,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3713202036071147588}
         m_TargetAssemblyTypeName: monster, Assembly-CSharp
-        m_MethodName: Fight
+        m_MethodName: Defend
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1918,6 +1839,85 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &8241002477249822907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7997284197818199092}
+  - component: {fileID: 6911914022663572656}
+  - component: {fileID: 5217705083183397845}
+  m_Layer: 31
+  m_Name: charisma required
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7997284197818199092
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8241002477249822907}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.34482753, y: 0.34482753, z: 0.34482753}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 832085645379874020}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 6, y: -30}
+  m_SizeDelta: {x: 363.5, y: 66.61753}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &6911914022663572656
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8241002477249822907}
+  m_CullTransparentMesh: 1
+--- !u!114 &5217705083183397845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8241002477249822907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8930817, g: 0.8930817, b: 0.8930817, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 585188cdc4600544eb408bee749e4b3a, type: 3}
+    m_FontSize: 66
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 117
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 150 charisma required
 --- !u!1 &8830989378847251786
 GameObject:
   m_ObjectHideFlags: 0
@@ -2245,7 +2245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4230300616821539953, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
       propertyPath: m_Name
-      value: fail
+      value: persuade fail
       objectReference: {fileID: 0}
     - target: {fileID: 4230300616821539953, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
       propertyPath: m_IsActive
@@ -2281,31 +2281,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7956553767698567890, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
       propertyPath: lines.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7956553767698567890, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
       propertyPath: lines.Array.data[0]
-      value: Well in that ca-
+      value: My teachings..?
       objectReference: {fileID: 0}
     - target: {fileID: 7956553767698567890, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
       propertyPath: lines.Array.data[1]
-      value: Wait a minute. YOUR LYING
+      value: Well in that ca-
       objectReference: {fileID: 0}
     - target: {fileID: 7956553767698567890, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
       propertyPath: lines.Array.data[2]
-      value: I can see it on you face your lying
+      value: Wait a minute. YOUR LYING
       objectReference: {fileID: 0}
     - target: {fileID: 7956553767698567890, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
       propertyPath: lines.Array.data[3]
-      value: I was right all along, every one wants my gold
+      value: I can see it on you face your lying
       objectReference: {fileID: 0}
     - target: {fileID: 7956553767698567890, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
       propertyPath: lines.Array.data[4]
-      value: Prepare to die mongral intruder..
+      value: I was right all along, every one wants my gold
       objectReference: {fileID: 0}
     - target: {fileID: 7956553767698567890, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
       propertyPath: lines.Array.data[5]
-      value: 'Now let us begin, challenger. '
+      value: Prepare to die mongral intruder..
       objectReference: {fileID: 0}
     - target: {fileID: 8691337029633808793, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
       propertyPath: m_Pivot.x
@@ -2670,24 +2670,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7956553767698567890, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
       propertyPath: lines.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7956553767698567890, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
       propertyPath: lines.Array.data[0]
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7956553767698567890, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
-      propertyPath: lines.Array.data[1]
       value: "\u266AI\u2019m the neeeeeew king, I\u2019ll take the queeeen. Cause
         in h-\u266A"
       objectReference: {fileID: 0}
     - target: {fileID: 7956553767698567890, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
-      propertyPath: lines.Array.data[2]
+      propertyPath: lines.Array.data[1]
       value: Oh. Hello, there. I did not hear you enter my room.
       objectReference: {fileID: 0}
     - target: {fileID: 7956553767698567890, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
-      propertyPath: lines.Array.data[3]
+      propertyPath: lines.Array.data[2]
       value: 'Ahem, I am the skeleton king and I did NOT just sing if anyone asks. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956553767698567890, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
+      propertyPath: lines.Array.data[3]
+      value: Anyways... I will defeat any who enter this castle with bad intentions.
       objectReference: {fileID: 0}
     - target: {fileID: 7956553767698567890, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
       propertyPath: lines.Array.data[4]
@@ -3029,7 +3029,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4230300616821539953, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
       propertyPath: m_Name
-      value: conversation
+      value: defend
       objectReference: {fileID: 0}
     - target: {fileID: 4230300616821539953, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
       propertyPath: m_IsActive
@@ -3176,6 +3176,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
+--- !u!1 &2081007508830894963 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4230300616821539953, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
+  m_PrefabInstance: {fileID: 2761888214993780482}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6830243507308799643 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8691337029633808793, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
@@ -3422,7 +3427,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4230300616821539953, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
       propertyPath: m_Name
-      value: persuade
+      value: persuade succes
       objectReference: {fileID: 0}
     - target: {fileID: 4230300616821539953, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
       propertyPath: m_IsActive
@@ -3458,24 +3463,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7956553767698567890, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
       propertyPath: lines.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7956553767698567890, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
       propertyPath: lines.Array.data[0]
-      value: Well in that case!
+      value: My teachings..?
       objectReference: {fileID: 0}
     - target: {fileID: 7956553767698567890, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
       propertyPath: lines.Array.data[1]
-      value: Come on in. Make yourself at home.
+      value: Well in that case!
       objectReference: {fileID: 0}
     - target: {fileID: 7956553767698567890, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
       propertyPath: lines.Array.data[2]
-      value: I'll make you some tea, there has been years since I have had guests
-        at my place :)
+      value: Come on in. Make yourself at home.
       objectReference: {fileID: 0}
     - target: {fileID: 7956553767698567890, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
       propertyPath: lines.Array.data[3]
-      value: 'Ahem, I am the skeleton king and I did NOT just sing if anyone asks. '
+      value: I'll make you some tea, there has been years since I have had guests
+        at my place :)
       objectReference: {fileID: 0}
     - target: {fileID: 7956553767698567890, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
       propertyPath: lines.Array.data[4]
@@ -3570,6 +3575,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
+--- !u!1 &165398199143417617 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4230300616821539953, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
+  m_PrefabInstance: {fileID: 4106886169947358048}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &4639626586959174393 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8691337029633808793, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
