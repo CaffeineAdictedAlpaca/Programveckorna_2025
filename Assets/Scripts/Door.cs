@@ -8,6 +8,8 @@ public class Door : MonoBehaviour
     FadeScript fade;
     RoomTracker roomTracker;
 
+    [SerializeField] AudioSource sound;
+
     private void Start()
     {
         fade = GameObject.FindAnyObjectByType<FadeScript>();
@@ -17,6 +19,7 @@ public class Door : MonoBehaviour
     public void OnObjectClicked()
     {
         OpenDoor();
+        sound.Play();
     }
 
     private void OnMouseDown()
