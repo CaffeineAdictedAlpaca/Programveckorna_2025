@@ -1539,99 +1539,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e983acb9b98327e48b32a97b09688a65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &1944794333
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 531395643551086184, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
-      propertyPath: moneyAmount
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1240436702576648065, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.7245572
-      objectReference: {fileID: 0}
-    - target: {fileID: 1240436702576648065, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.8818398
-      objectReference: {fileID: 0}
-    - target: {fileID: 1240436702576648065, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.049366523
-      objectReference: {fileID: 0}
-    - target: {fileID: 1240436702576648065, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1240436702576648065, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1240436702576648065, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1240436702576648065, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1240436702576648065, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1240436702576648065, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1240436702576648065, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6098777522498138892, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.x
-      value: 2.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 6098777522498138892, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
-      propertyPath: m_SpriteTilingProperty.newSize.y
-      value: 2.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 6098777522498138892, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 2.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 6098777522498138892, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 6162536701701082261, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
-      propertyPath: m_Name
-      value: Item
-      objectReference: {fileID: 0}
-    - target: {fileID: 7389612219272380339, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
-      propertyPath: m_Size.x
-      value: 2.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7389612219272380339, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
-      propertyPath: m_Size.y
-      value: 2.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 7389612219272380339, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: bb7053e895c1d774cbd68f5241b63242, type: 3}
-    - target: {fileID: 7389612219272380339, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: feda5127c67010247b44c5b9a4d49cfa, type: 3}
 --- !u!1 &1980558459
 GameObject:
   m_ObjectHideFlags: 0
@@ -1990,6 +1897,10 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1045851681022697386, guid: 0f7741b7c73887544b7cc1d4b9c38b9d, type: 3}
+      propertyPath: gameUI
+      value: 
+      objectReference: {fileID: 1524321186}
+    - target: {fileID: 1045851681022697386, guid: 0f7741b7c73887544b7cc1d4b9c38b9d, type: 3}
       propertyPath: statDisplay
       value: 
       objectReference: {fileID: 503618119}
@@ -2077,6 +1988,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5358902366629934098, guid: 0f7741b7c73887544b7cc1d4b9c38b9d, type: 3}
+      propertyPath: gameUI
+      value: 
+      objectReference: {fileID: 1524321186}
     - target: {fileID: 5358902366629934098, guid: 0f7741b7c73887544b7cc1d4b9c38b9d, type: 3}
       propertyPath: statDisplay
       value: 
@@ -2186,4 +2101,3 @@ SceneRoots:
   - {fileID: 1524321188}
   - {fileID: 36723272}
   - {fileID: 1076542844}
-  - {fileID: 1944794333}
