@@ -17,9 +17,12 @@ public class monster : MonoBehaviour
     public bool Dodge_QTE_start;
     public bool Attack_QTE_start;
     public bool QTE_miss;
+    public bool damage;
 
     public Vector2 spawn;
     public Vector2 QTE_spawn;
+
+   
 
     [SerializeField]
     GameObject fight_option;
@@ -42,6 +45,7 @@ public class monster : MonoBehaviour
     StatManager player;
     smol_monster smol;
     swing swing;
+    public Image player_screen;
 
     Animator anim;
     SpriteRenderer sprite;
@@ -66,6 +70,8 @@ public class monster : MonoBehaviour
         QTE_miss = false;
         start_timer = false;
         timer = 1.5f;
+        damage = false;
+        player_screen.enabled = false;
     }
 
     // Update is called once per frame
@@ -96,7 +102,7 @@ public class monster : MonoBehaviour
         }
         if (timer <= 0)
         {
-            Monster_ATK();
+            QTE_dodging();
         }
     }
     // Function to call when the object is clicked
@@ -124,29 +130,22 @@ public class monster : MonoBehaviour
     public void Player_turn()
     {
         attack_option.SetActive(true);
+        damage = false;
+        player_screen.enabled = false;
     }
     public void Monster_turn()
     {
         start_timer = true;
+        damage = false;
+        player_screen.enabled = false;
     }
-    public void Monster_ATK()
-    {
-        timer = 1.5f;
-        print("start");
-        start_timer = false;
-        stick.SetActive(true);
-        bar.SetActive(true);
-        dodge_window.SetActive(true);
-        dodge_window.transform.position = new Vector2(Random.Range(700, 1600), 140);
-        dodge_window.transform.localScale = new Vector3(player.agility * 0.006f, 0.74163f, 0);
-        stick.transform.position = spawn;
-        Dodge_QTE_start = true;
-    }
+
 
     public void PlayerATK()
     {
         health -= player.attack;
         anim.SetTrigger("PlayerATK");
+        damage = true;
         swing.anim();
         bar.SetActive(false);
         attack_window.SetActive(false);
@@ -159,6 +158,21 @@ public class monster : MonoBehaviour
         stick.SetActive(false);
         player.health -= attack;
         anim.SetTrigger("MonsterATK");
+        damage = true;
+        print("ajaj");
+    }
+    public void QTE_dodging()
+    {
+        timer = 1.5f;
+        print("start");
+        start_timer = false;
+        stick.SetActive(true);
+        bar.SetActive(true);
+        dodge_window.SetActive(true);
+        dodge_window.transform.position = new Vector2(Random.Range(700, 1600), 140);
+        dodge_window.transform.localScale = new Vector3(player.agility * 0.006f, 0.74163f, 0);
+        stick.transform.position = spawn;
+        Dodge_QTE_start = true;
     }
 
     public void QTE_attacking()
@@ -190,10 +204,39 @@ public class monster : MonoBehaviour
 
     public void red()
     {
-        sprite.color = Color.red;
+        if (damage == true)
+        {
+            player_screen.enabled = true;
+            sprite.color = Color.red;
+        }
     }
     public void white()
     {
-        sprite.color = Color.white;
+        if (damage == true)
+        {
+            player_screen.enabled = true;
+            sprite.color = Color.white;
+        }
+    }
+    public void player_red()
+    {
+        if (damage == true)
+        {
+            print("YIPI");
+            player_screen.enabled = true;
+            Color color = player_screen.color;
+            color.a = 0.5f;
+            player_screen.color = color;
+        }
+    }
+    public void player_white()
+    {
+        if (damage == true)
+        {
+            player_screen.enabled = true;
+            Color color = player_screen.color;
+            color.a = 0;
+            player_screen.color = color;
+        }
     }
 }
