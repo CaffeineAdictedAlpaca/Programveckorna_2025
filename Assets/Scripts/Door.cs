@@ -34,11 +34,9 @@ public class Door : MonoBehaviour
 
     private IEnumerator OpenDoorWithDelay()
     {
-        // Start the fade effect
-        fade.StartFade();
-
-        // Wait for the fade to complete (adjust duration as needed)
-        yield return new WaitForSeconds(0.5f);
+        StartCoroutine(fade.FadeOut());
+        yield return StartCoroutine(fade.FadeOut());
+        yield return new WaitForSeconds(0.1f);
 
         // Load the next scene
         roomTracker.LoadNextScene();
