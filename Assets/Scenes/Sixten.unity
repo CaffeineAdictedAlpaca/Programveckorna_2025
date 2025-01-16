@@ -842,34 +842,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DialogueBox
       objectReference: {fileID: 0}
-    - target: {fileID: 4230300616821539953, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4349145833513179732, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4349145833513179732, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 6d1958001c0d6714394401224928d795, type: 3}
-    - target: {fileID: 4349145833513179732, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
-      propertyPath: m_Color.a
-      value: 0.6666667
-      objectReference: {fileID: 0}
-    - target: {fileID: 4349145833513179732, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4349145833513179732, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
-      propertyPath: m_Color.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4349145833513179732, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
-      propertyPath: m_Color.r
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8691337029633808793, guid: f9c71c5635c79c540b4cd4e58677b9d0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
