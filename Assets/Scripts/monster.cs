@@ -18,18 +18,10 @@ public class monster : MonoBehaviour
     public bool Attack_QTE_start;
     public bool QTE_miss;
     public bool damage;
+    public bool talked;
 
     public Vector2 spawn;
     public Vector2 QTE_spawn;
-
-   
-
-    [SerializeField]
-    GameObject fight_option;
-    [SerializeField]
-    GameObject leave_option;
-    [SerializeField]
-    GameObject attack_option;
 
     [SerializeField]
     GameObject bar;
@@ -42,6 +34,35 @@ public class monster : MonoBehaviour
     [SerializeField]
     GameObject healthtext;
 
+    //dialogue
+    [SerializeField]
+    GameObject fight_option;
+    [SerializeField]
+    GameObject persuade_option;
+    [SerializeField]
+    GameObject attack_option;
+
+    [SerializeField]
+    GameObject start;
+    [SerializeField]
+    GameObject fight;
+    [SerializeField]
+    GameObject defend_option;
+    [SerializeField]
+    GameObject persuade_succes_option;
+    [SerializeField]
+    GameObject persuade_fail_option;
+    [SerializeField]
+    GameObject fail;
+    [SerializeField]
+    GameObject hit_succes;
+    [SerializeField]
+    GameObject hit_miss;
+    [SerializeField]
+    GameObject dodge_succes;
+    [SerializeField]
+    GameObject dodge_miss;
+
     StatManager player;
     smol_monster smol;
     swing swing;
@@ -52,6 +73,16 @@ public class monster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        start.SetActive(false);
+        fight.SetActive(false);
+        defend_option.SetActive(false);
+        persuade_succes_option.SetActive(false);
+        persuade_fail_option.SetActive(false);
+        fail.SetActive(false);
+        hit_succes.SetActive(false);
+        hit_miss.SetActive(false);
+        dodge_succes.SetActive(false);
+        dodge_miss.SetActive(false);
         swing = FindAnyObjectByType<swing>();
         smol = FindAnyObjectByType<smol_monster>();
         player = FindAnyObjectByType<StatManager>();
@@ -59,7 +90,7 @@ public class monster : MonoBehaviour
         sprite = GetComponent<SpriteRenderer>();
         healthtext.SetActive(false);
         fight_option.SetActive(false);
-        leave_option.SetActive(false);
+        persuade_option.SetActive(false);
         attack_option.SetActive(false);
         bar.SetActive(false);
         attack_window.SetActive(false);
@@ -71,12 +102,18 @@ public class monster : MonoBehaviour
         start_timer = false;
         timer = 1.5f;
         damage = false;
+        print("start");
         player_screen.enabled = false;
+        talked = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (player.charisma < 150)
+        {
+            persuade_succes_option.GetComponent<Text>().color = Color.red;
+        }
         if (smol.talking == true)
         {
             talk();
@@ -91,7 +128,7 @@ public class monster : MonoBehaviour
         if (Dodge_QTE_start == true || Attack_QTE_start == true)
         {
             stick.transform.position += new Vector3(1700, 0, 0) * Time.deltaTime;
-            if (stick.transform.position.x >= 1700)
+            if (stick.transform.position.x >= 1800)
             {
                 QTE_miss = true;
             }
@@ -110,22 +147,49 @@ public class monster : MonoBehaviour
     {
         print("talk");
         FindAnyObjectByType<CameraScript>().enabled = false;
+        start.SetActive(true);
         fight_option.SetActive(true);
-        leave_option.SetActive(true);
+        defend_option.SetActive(true);
+    }
+    public void Defend()
+    {
+        fight_option.SetActive(false);
+        defend_option.SetActive(false);
+        persuade_succes_option.SetActive(true);
+        persuade_fail_option.SetActive(true);
     }
     public void Fight()
     {
+        fight.SetActive(true);
         healthtext.SetActive(true);
         fight_option.SetActive(false);
-        leave_option.SetActive(false);
+        persuade_option.SetActive(false);
         attack_option.SetActive(true);
     }
-    public void leave()
+    public void persuade_succes()
     {
-        FindAnyObjectByType<CameraScript>().enabled = true;
+        if (player.charisma > 150)
+        {
+            persuade_succes_option.SetActive(true);
+        }
+        else
+        {
+            persuade_fail_option.SetActive(true);
+            fail.SetActive(true);
+            healthtext.SetActive(true);
+            fight_option.SetActive(false);
+            persuade_option.SetActive(false);
+            attack_option.SetActive(true);
+        }
+    }
+    public void persuade_fail()
+    {
+        persuade_fail_option.SetActive(true);
+        fail.SetActive(true);
+        healthtext.SetActive(true);
         fight_option.SetActive(false);
-        leave_option.SetActive(false);
-        gameObject.SetActive(false);
+        persuade_option.SetActive(false);
+        attack_option.SetActive(true);
     }
     public void Player_turn()
     {
@@ -143,6 +207,7 @@ public class monster : MonoBehaviour
 
     public void PlayerATK()
     {
+        hit_succes.SetActive(true);
         health -= player.attack;
         anim.SetTrigger("PlayerATK");
         damage = true;
@@ -153,6 +218,7 @@ public class monster : MonoBehaviour
     }
     public void MonsterATK()
     {
+        dodge_miss.SetActive(true);
         bar.SetActive(false);
         dodge_window.SetActive(false);
         stick.SetActive(false);
@@ -169,8 +235,8 @@ public class monster : MonoBehaviour
         stick.SetActive(true);
         bar.SetActive(true);
         dodge_window.SetActive(true);
-        dodge_window.transform.position = new Vector2(Random.Range(700, 1600), 140);
-        dodge_window.transform.localScale = new Vector3(player.agility * 0.006f, 0.74163f, 0);
+        dodge_window.transform.position = new Vector2(Random.Range(800, 1600), 140);
+        dodge_window.transform.localScale = new Vector3(player.agility * 0.008f, 0.74163f, 0);
         stick.transform.position = spawn;
         Dodge_QTE_start = true;
     }
@@ -180,14 +246,15 @@ public class monster : MonoBehaviour
         attack_option.SetActive(false);
         bar.SetActive(true);
         attack_window.SetActive(true);
-        attack_window.transform.position = new Vector2(Random.Range(700, 1600), 140);
-        attack_window.transform.localScale = new Vector3(player.agility * 0.006f, 0.74163f, 0);
+        attack_window.transform.position = new Vector2(Random.Range(800, 1600), 140);
+        attack_window.transform.localScale = new Vector3(player.agility * 0.008f, 0.74163f, 0);
         stick.SetActive(true);
         stick.transform.position = spawn;
         Attack_QTE_start = true;
     }
     public void QTE_hit()
     {
+        hit_miss.SetActive(true);
         bar.SetActive(false);
         attack_window.SetActive(false);
         stick.SetActive(false);
@@ -196,6 +263,7 @@ public class monster : MonoBehaviour
     }
     public void QTE_dodge()
     {
+        dodge_succes.SetActive(true);
         bar.SetActive(false);
         dodge_window.SetActive(false);
         stick.SetActive(false);
