@@ -72,6 +72,7 @@ public class monster : MonoBehaviour
     swing swing;
     public Image player_screen;
     public Text chari;
+    public bool persuaded;
 
     Animator anim;
     SpriteRenderer sprite;
@@ -117,6 +118,11 @@ public class monster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (persuade_succes.activeSelf == false && persuaded == true)
+        {
+            Destroy(gameObject);
+            FindAnyObjectByType<CameraScript>().enabled = true;
+        }
         if (player.charisma < 150)
         {
             chari.color = Color.red;
@@ -197,10 +203,10 @@ public class monster : MonoBehaviour
     {
         if (player.charisma >= 150)
         {
+            persuaded = true;
             persuade_succes_option.SetActive(false);
             persuade_fail_option.SetActive(false);
             persuade_succes.SetActive(true);
-            health = 0;
         }
     }
     public void Persuade_fail()
