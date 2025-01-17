@@ -123,12 +123,12 @@ public class mantis : MonoBehaviour
                 talked = true;
             }
         }
-        if (health <= 0 && health > -100)
+        if (health <= 0 && health > -1000)
         {
             die();
         }
 
-        if (health == -999)
+        if (health == -9999)
         {
             print("död2");
             if (death.activeSelf == false)
@@ -175,7 +175,7 @@ public class mantis : MonoBehaviour
     }
     public void Intimidate()
     {
-        random = Random.Range(player.attack * 0.5f, player.attack * 1);
+        random = Random.Range(player.charisma * 0.5f, player.charisma * 1);
         if (random > 100)
         {
             Intimidate_succes();
@@ -205,6 +205,7 @@ public class mantis : MonoBehaviour
     public void Intimidate_fail()
     {
         fight.SetActive(false);
+        fight_option.SetActive(false);
         intimidate_option.SetActive(false);
         intimidate_fail.SetActive(true);
         healthtext.SetActive(true);
@@ -340,6 +341,6 @@ public class mantis : MonoBehaviour
         dodge_window.SetActive(false);
         stick.SetActive(false);
         attack_option.SetActive(false);
-        health = -999;
+        health = -9999;
     }
 }

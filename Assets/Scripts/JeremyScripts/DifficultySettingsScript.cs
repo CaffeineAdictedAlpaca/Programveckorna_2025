@@ -45,7 +45,7 @@ public class DifficultySettingsScript : MonoBehaviour
                     statManager.health = 200;
                     statManager.attack = 100;
                     statManager.agility = 300;
-                    statManager.charisma = 200;
+                    statManager.charisma = 100;
                     statManager.money = 0;
                     break;
 
@@ -63,7 +63,7 @@ public class DifficultySettingsScript : MonoBehaviour
                     statManager.health = 75;
                     statManager.attack = 75;
                     statManager.agility = 50;
-                    statManager.charisma = 75;
+                    statManager.charisma = 100;
                     statManager.money = 0;
                     break;
             }
