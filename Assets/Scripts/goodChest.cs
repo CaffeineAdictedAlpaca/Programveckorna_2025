@@ -40,7 +40,8 @@ public class goodChest : MonoBehaviour
     }
     public void OnObjectClicked()
     {
-        ShowPrompt();
+        //ShowPrompt();
+        AcceptItem();
         openChestSound.Play();
 
     }
