@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class HighScoreManager : MonoBehaviour
 {
-    private const string HighScoreKey = "HighScore";
+    private const string HighScoreKey = "Most Money Collected";
+    private const string yourScore = "Your Score";
 
     public static int GetHighScore()
     {

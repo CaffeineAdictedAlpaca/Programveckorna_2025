@@ -1,17 +1,28 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
+
 
 public class HighScoreDisplay : MonoBehaviour
 {
-    public TextMeshProUGUI highScoreText;
-    public StatManager statManager;
+    public Text yourScore;
+    public Text highScoreText;
+    StatManager statManager;
 
+
+    private void Start()
+    {
+        statManager = FindObjectOfType<StatManager>();
+    }
     void Update()
     {
         if (statManager != null)
         {
-            highScoreText.text = "High Score: " + statManager.GetHighScore();
+            highScoreText.text = "Most Money Collected: " + statManager.GetHighScore();
         }
+
+        yourScore.text = "Your Money Collected: " + statManager.money;
+
+
+
     }
 }
