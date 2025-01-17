@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class mantis_QTE : MonoBehaviour
 {
-    mantis monster;
+    public mantis monster;
 
     public bool dodge_window;
     public bool attack_window;

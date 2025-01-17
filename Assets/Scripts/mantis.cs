@@ -47,8 +47,6 @@ public class mantis : MonoBehaviour
     [SerializeField]
     GameObject fight;
     [SerializeField]
-    GameObject intimidate;
-    [SerializeField]
     GameObject intimidate_succes;
     [SerializeField]
     GameObject intimidate_fail;
@@ -76,7 +74,7 @@ public class mantis : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        intimidate.SetActive(false);
+
         start.SetActive(false);
         fight.SetActive(false);
         intimidate_option.SetActive(false);
