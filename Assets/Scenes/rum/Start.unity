@@ -338,15 +338,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
       propertyPath: sceneNames.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
-      propertyPath: fixedIndices.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
+      propertyPath: fixedIndices.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
       propertyPath: sceneNames.Array.data[0]
-      value: Room1
+      value: mantis
       objectReference: {fileID: 0}
     - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
       propertyPath: sceneNames.Array.data[1]
@@ -554,6 +554,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9d628cceb0c27a4a9dd525a038ae218, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sound: {fileID: 0}
 --- !u!212 &1158211335
 SpriteRenderer:
   m_ObjectHideFlags: 0
