@@ -39,15 +39,16 @@ public class combat_tutorial : MonoBehaviour
         {
             if (wait.activeSelf == false)
             {
+                line1 = false;
                 QTE.SetActive(true);
                 QTE_explain.SetActive(true);
+                stick.SetActive(true);
             }
         }
         if (QTE.activeSelf)
         {
             if (QTE_explain.activeSelf == false)
             {
-                stick.SetActive(true);
                 stick.transform.position += new Vector3(500, 0, 0) * Time.deltaTime;
                 if (stick.transform.position.x >= 1800)
                 {
@@ -63,6 +64,7 @@ public class combat_tutorial : MonoBehaviour
             stick.SetActive(false);
             QTE.SetActive(false);
             good_luck.SetActive(true);
+            played = true;
         }
         if (played == true && good_luck.activeSelf == false)
         {
