@@ -29,14 +29,14 @@ public class UI : MonoBehaviour
         if (isFirstSceneLoad)
         {
             // Skip activation for the first scene load
-            isFirstSceneLoad = false;
+            //isFirstSceneLoad = false;
             return;
         }
 
         // Activate all children of this GameObject
-        foreach (Transform child in transform)
+        //foreach (Transform child in transform)
         {
-            child.gameObject.SetActive(true);
+           // child.gameObject.SetActive(true);
         }
     }
 }
