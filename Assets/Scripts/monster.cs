@@ -120,6 +120,11 @@ public class monster : MonoBehaviour
         if (player.charisma < 150)
         {
             chari.color = Color.red;
+            print("kaka");
+        }
+        else
+        {
+            chari.color = Color.white;
         }
         if (smol.talking == true)
         {

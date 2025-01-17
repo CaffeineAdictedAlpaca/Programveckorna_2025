@@ -438,7 +438,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &227174444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -609,7 +609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6516061618163189094, guid: ba0d46603c2b6ac4394706675c5e3fb9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -624,6 +624,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2319414704203816740, guid: 829c84f3549bfdb4f91aab0ae4fd4f33, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319414704203816740, guid: 829c84f3549bfdb4f91aab0ae4fd4f33, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319414704203816740, guid: 829c84f3549bfdb4f91aab0ae4fd4f33, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3743842594893732155, guid: 829c84f3549bfdb4f91aab0ae4fd4f33, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -631,6 +643,10 @@ PrefabInstance:
     - target: {fileID: 3743842594893732155, guid: 829c84f3549bfdb4f91aab0ae4fd4f33, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5542565245929540605, guid: 829c84f3549bfdb4f91aab0ae4fd4f33, type: 3}
+      propertyPath: m_Name
+      value: persuade succes text
       objectReference: {fileID: 0}
     - target: {fileID: 6407781040115133700, guid: 829c84f3549bfdb4f91aab0ae4fd4f33, type: 3}
       propertyPath: m_Name
