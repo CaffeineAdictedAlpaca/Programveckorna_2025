@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class DeathScript : MonoBehaviour
 {
 
-    bool isDead = false;
+    
 
 
     GameObject roomTracker;
@@ -35,18 +35,28 @@ public class DeathScript : MonoBehaviour
         if (statManager.GetComponent<StatManager>().health <= 0)
         {
 
-            isDead = true;
-            Destroy(roomTracker);
-            print("Destroyed roomtracker");
-            Destroy(statManager);
-            print("destroyed statmanager");
-            Destroy(gameUI);
-            print("destroyed gameUI");
-            Destroy(fadeCanvas);
-            print("destroyed fadecanvas");
-
-            SceneManager.LoadScene("MainMenu");
+            Death();
         }
+
+    }
+
+
+
+    public void Death()
+    {
+        Destroy(roomTracker);
+        print("Destroyed roomtracker");
+        Destroy(statManager);
+        print("destroyed statmanager");
+        Destroy(gameUI);
+        print("destroyed gameUI");
+        Destroy(fadeCanvas);
+        print("destroyed fadecanvas");
+
+        SceneManager.LoadScene("MainMenu");
+
+
+
 
 
     }
