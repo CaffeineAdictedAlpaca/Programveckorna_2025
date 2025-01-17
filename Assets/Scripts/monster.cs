@@ -130,13 +130,17 @@ public class monster : MonoBehaviour
                 talked = true;
             }
         }
-        if (health <= 0)
+        if (health <= 0 && health > -100)
         {
             die();
-            if (death == false)
+        }
+        if (health == -999)
+        {
+            if (death.activeSelf == false)
             {
                 FindAnyObjectByType<CameraScript>().enabled = true;
                 Destroy(gameObject);
+                smol.dead = true;
             }
         }
 
@@ -325,7 +329,8 @@ public class monster : MonoBehaviour
     }
     public void die()
     {
-        health = 1;
+        anim.enabled = false;
+        health = -999;
         death.SetActive(true);
         healthtext.SetActive(false);
         bar.SetActive(false);

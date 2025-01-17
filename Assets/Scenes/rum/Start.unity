@@ -346,7 +346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
       propertyPath: sceneNames.Array.data[0]
-      value: mantis
+      value: monster fight
       objectReference: {fileID: 0}
     - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
       propertyPath: sceneNames.Array.data[1]
@@ -1301,6 +1301,7 @@ MonoBehaviour:
   attackText: {fileID: 2409576374512232967}
   charismaText: {fileID: 1813751223024524323}
   moneyText: {fileID: 4114198822572659524}
+  agilityText: {fileID: 0}
 --- !u!114 &4270529978045895873
 MonoBehaviour:
   m_ObjectHideFlags: 0

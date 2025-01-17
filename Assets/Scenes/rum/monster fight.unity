@@ -435,6 +435,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue: {fileID: 657011564}
   talking: 0
+  dead: 0
 --- !u!61 &128977708
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -467,7 +468,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03009653, y: 0.022572458}
+  m_Offset: {x: 0.019425362, y: 0.004787065}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -478,7 +479,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6568185, y: 0.51801}
+  m_Size: {x: 0.49319452, y: 0.42552716}
   m_EdgeRadius: 0
 --- !u!95 &128977709
 Animator:
@@ -490,7 +491,7 @@ Animator:
   m_GameObject: {fileID: 128977704}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: cc2a7fd4ad7a2c6479c1de99974ad8b6, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8d461e10fd79783439c484076fe90556, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -796,11 +797,11 @@ PrefabInstance:
       objectReference: {fileID: 110761973}
     - target: {fileID: 3743842594893732155, guid: 829c84f3549bfdb4f91aab0ae4fd4f33, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3743842594893732155, guid: 829c84f3549bfdb4f91aab0ae4fd4f33, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4153918899841602868, guid: 829c84f3549bfdb4f91aab0ae4fd4f33, type: 3}
       propertyPath: m_SizeDelta.x
@@ -893,6 +894,10 @@ PrefabInstance:
     - target: {fileID: 6407781040115133700, guid: 829c84f3549bfdb4f91aab0ae4fd4f33, type: 3}
       propertyPath: m_Name
       value: monster
+      objectReference: {fileID: 0}
+    - target: {fileID: 6407781040115133700, guid: 829c84f3549bfdb4f91aab0ae4fd4f33, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6830243507308799643, guid: 829c84f3549bfdb4f91aab0ae4fd4f33, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1034,6 +1039,10 @@ PrefabInstance:
       propertyPath: lines.Array.data[3]
       value: I can see it on you face, your lying
       objectReference: {fileID: 0}
+    - target: {fileID: 8602587066855691515, guid: 829c84f3549bfdb4f91aab0ae4fd4f33, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b851ebf0c10f5a04ebccc377de9a8527, type: 2}
     - target: {fileID: 8654812825619049016, guid: 829c84f3549bfdb4f91aab0ae4fd4f33, type: 3}
       propertyPath: m_SizeDelta.x
       value: 1642.7002
@@ -1146,7 +1155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6516061618163189094, guid: ba0d46603c2b6ac4394706675c5e3fb9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

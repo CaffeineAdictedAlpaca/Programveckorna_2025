@@ -125,26 +125,28 @@ public class mantis : MonoBehaviour
                 talked = true;
             }
         }
-        if (health <= 0)
+        if (health <= 0 && health > -100)
         {
             die();
         }
-        if (end_dialogue == true && death.activeSelf)
-        {
 
+        if (health == -999)
+        {
+            print("död2");
+            if (death.activeSelf == false)
+            {
+                print("död3");
+                FindAnyObjectByType<CameraScript>().enabled = true;
+                Destroy(gameObject);
+                smol.dead = true;
+            }
         }
 
-        if (end_dialogue == true && dead == true)
-        {
-            print("död");
-            FindAnyObjectByType<CameraScript>().enabled = true;
-            Destroy(gameObject);
-        }
-
-        if (end_dialogue == true && intimidate_succes == false)
+        if (end_dialogue == true && intimidate_succes.activeSelf == false)
         {
             FindAnyObjectByType<CameraScript>().enabled = true;
             Destroy(gameObject);
+            smol.dead = true;
         }
 
         if (Dodge_QTE_start == true || Attack_QTE_start == true)
@@ -333,14 +335,13 @@ public class mantis : MonoBehaviour
     }
     public void die()
     {
-        health = 1;
-        dead = true;
+        anim.enabled = false;
+        death.SetActive(true);
         healthtext.SetActive(false);
         bar.SetActive(false);
         dodge_window.SetActive(false);
         stick.SetActive(false);
         attack_option.SetActive(false);
-        death.SetActive(true);
-        end_dialogue = true;
+        health = -999;
     }
 }
