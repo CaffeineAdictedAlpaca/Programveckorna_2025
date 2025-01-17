@@ -443,6 +443,68 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &245260897
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5176014884950979847, guid: 74fc66cd6e114f7458c4f18c972b781a, type: 3}
+      propertyPath: m_Name
+      value: ChestOpenSoundFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 8472474884190242658, guid: 74fc66cd6e114f7458c4f18c972b781a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.26685515
+      objectReference: {fileID: 0}
+    - target: {fileID: 8472474884190242658, guid: 74fc66cd6e114f7458c4f18c972b781a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.0674206
+      objectReference: {fileID: 0}
+    - target: {fileID: 8472474884190242658, guid: 74fc66cd6e114f7458c4f18c972b781a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8472474884190242658, guid: 74fc66cd6e114f7458c4f18c972b781a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8472474884190242658, guid: 74fc66cd6e114f7458c4f18c972b781a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8472474884190242658, guid: 74fc66cd6e114f7458c4f18c972b781a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8472474884190242658, guid: 74fc66cd6e114f7458c4f18c972b781a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8472474884190242658, guid: 74fc66cd6e114f7458c4f18c972b781a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8472474884190242658, guid: 74fc66cd6e114f7458c4f18c972b781a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8472474884190242658, guid: 74fc66cd6e114f7458c4f18c972b781a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 74fc66cd6e114f7458c4f18c972b781a, type: 3}
+--- !u!82 &245260898 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4652492620293732219, guid: 74fc66cd6e114f7458c4f18c972b781a, type: 3}
+  m_PrefabInstance: {fileID: 245260897}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &250283517
 GameObject:
   m_ObjectHideFlags: 0
@@ -5267,6 +5329,7 @@ MonoBehaviour:
   noButton: {fileID: 8641416756435447670}
   chestloot: {fileID: 1743487212957478764}
   changeFrame: {fileID: 796440736}
+  openChestSound: {fileID: 245260898}
 --- !u!222 &6990601379199605260
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6013,3 +6076,4 @@ SceneRoots:
   - {fileID: 458209678}
   - {fileID: 806036066}
   - {fileID: 2001550391}
+  - {fileID: 245260897}

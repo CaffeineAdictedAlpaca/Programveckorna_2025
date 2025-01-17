@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class monsterhealthbar : MonoBehaviour
+public class mantis_healthbar : MonoBehaviour
 {
     public Slider slider;
-    public monster enemy;
+    public mantis enemy;
     public Gradient gradient;
     public Image fill;
 

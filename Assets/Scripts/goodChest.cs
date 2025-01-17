@@ -15,6 +15,7 @@ public class goodChest : MonoBehaviour
     public GameObject chestloot;
 
     [SerializeField] ChangeChest changeFrame;
+    [SerializeField] AudioSource openChestSound;
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +40,9 @@ public class goodChest : MonoBehaviour
     }
     public void OnObjectClicked()
     {
-        ShowPrompt();
+        //ShowPrompt();
+        AcceptItem();
+        openChestSound.Play();
 
     }
 

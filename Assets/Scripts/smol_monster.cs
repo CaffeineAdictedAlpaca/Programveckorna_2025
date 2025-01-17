@@ -8,9 +8,11 @@ public class smol_monster : MonoBehaviour
     monster monster;
 
     public bool talking;
+    public bool dead;
     // Start is called before the first frame update
     void Start()
     {
+        dead = false;
         dialogue.SetActive(false);
         monster = FindAnyObjectByType<monster>();
         talking = false;
@@ -19,7 +21,10 @@ public class smol_monster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (dead == true)
+        {
+            Destroy(gameObject);
+        }
     }
     public void OnObjectClicked()
     {
