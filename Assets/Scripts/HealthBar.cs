@@ -14,10 +14,10 @@ public class HealthBar : MonoBehaviour
     {
         slider = gameObject.GetComponent<Slider>();
         statTracker = FindFirstObjectByType<StatManager>();
-        slider.maxValue = statTracker.maxHealth;
     }
     private void Update()
     {
+        slider.maxValue = statTracker.maxHealth;
         fill.color = gradient.Evaluate(slider.normalizedValue);
         slider.value = statTracker.health;
     }
