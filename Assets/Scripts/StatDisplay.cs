@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI attackText;
     public TextMeshProUGUI charismaText;
     public TextMeshProUGUI moneyText;
+    public TextMeshProUGUI agilityText;
 
     StatManager statManager;
 
@@ -25,7 +26,7 @@ public class UIManager : MonoBehaviour
             attackText.text = "Attack: " + statManager.attack.ToString("F0");
             charismaText.text = "Charisma: " + statManager.charisma.ToString("F0");
             moneyText.text = "Money: " + statManager.money.ToString();
-            
+            agilityText.text = "Agility: " + statManager.agility.ToString("F0");
         }
     }
 }
