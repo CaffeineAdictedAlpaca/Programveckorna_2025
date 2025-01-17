@@ -3365,11 +3365,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
       propertyPath: sceneNames.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
       propertyPath: fixedIndices.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
       propertyPath: sceneNames.Array.data[0]
@@ -3396,6 +3396,10 @@ PrefabInstance:
       value: monster fight
       objectReference: {fileID: 0}
     - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
+      propertyPath: sceneNames.Array.data[6]
+      value: WinScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
       propertyPath: fixedIndices.Array.data[0]
       value: 0
       objectReference: {fileID: 0}
@@ -3406,6 +3410,10 @@ PrefabInstance:
     - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
       propertyPath: fixedIndices.Array.data[2]
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3802575204930349252, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
+      propertyPath: fixedIndices.Array.data[3]
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4458477064387132448, guid: 9d18c3ea6e948774f8184392eba77578, type: 3}
       propertyPath: m_Name

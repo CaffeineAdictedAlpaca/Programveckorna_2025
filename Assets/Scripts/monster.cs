@@ -130,11 +130,11 @@ public class monster : MonoBehaviour
                 talked = true;
             }
         }
-        if (health <= 0 && health > -100)
+        if (health <= 0 && health > -1000)
         {
             die();
         }
-        if (health == -999)
+        if (health == -9999)
         {
             if (death.activeSelf == false)
             {
@@ -330,7 +330,7 @@ public class monster : MonoBehaviour
     public void die()
     {
         anim.enabled = false;
-        health = -999;
+        health = -9999;
         death.SetActive(true);
         healthtext.SetActive(false);
         bar.SetActive(false);

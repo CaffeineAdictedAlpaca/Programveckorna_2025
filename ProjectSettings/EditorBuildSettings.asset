@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/rum/Room5.unity
     guid: c99d6825af3cbbb45bb52dfce7358349
+  - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: 9ae64246226841a409dcdf7cf2c54497
   m_configObjects: {}
