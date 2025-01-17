@@ -1209,7 +1209,6 @@ Transform:
   m_Children:
   - {fileID: 1564542427}
   - {fileID: 1547785901}
-  - {fileID: 1616144936}
   - {fileID: 1643109411}
   - {fileID: 1824142647}
   - {fileID: 1160658037}
@@ -1293,6 +1292,7 @@ MonoBehaviour:
   noButton: {fileID: 1667370313}
   chestloot: {fileID: 1577523819}
   changeFrame: {fileID: 512282194}
+  openChestSound: {fileID: 0}
 --- !u!61 &512282196
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3172,7 +3172,8 @@ Transform:
   m_LocalPosition: {x: -5.24, y: -3.28, z: 0}
   m_LocalScale: {x: 2.8385, y: 2.8385, z: 2.8385}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1616144936}
   m_Father: {fileID: 425781089}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &832399763
@@ -6008,7 +6009,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 290017315}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -6573,7 +6574,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07fd8c667d6c03e459248025a13357ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chestBox: {fileID: 0}
+  chestBox: {fileID: 1616144935}
 --- !u!1 &1421924103
 GameObject:
   m_ObjectHideFlags: 0
@@ -7787,12 +7788,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616144935}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.25, y: -3.2415, z: 0}
-  m_LocalScale: {x: 2.4201632, y: 2.6432753, z: 1.4628271}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 0.003523068, y: 0.013563526, z: 0}
+  m_LocalScale: {x: 0.8526204, y: 0.93122256, z: 0.51535213}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 425781089}
+  m_Father: {fileID: 832025942}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1616144937
 MonoBehaviour:
@@ -9290,7 +9291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frame:
-  - {fileID: 0}
+  - {fileID: 425781088}
   - {fileID: 1410082511}
   changeTo: 1
   thisFrame: 2
@@ -9655,8 +9656,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frame:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 425781088}
+  - {fileID: 668180038}
   changeTo: 1
   thisFrame: 2
   dissableCamera: 0
