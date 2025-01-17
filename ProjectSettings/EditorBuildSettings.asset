@@ -41,4 +41,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/rum/Tutorial.unity
     guid: 4dbc77b04756df443be58bf8698e9d8e
+  - enabled: 1
+    path: Assets/Scenes/rum/mantis.unity
+    guid: 19137e794806de34eac4da669254a9a0
+  - enabled: 1
+    path: Assets/Scenes/rum/Room5.unity
+    guid: c99d6825af3cbbb45bb52dfce7358349
   m_configObjects: {}

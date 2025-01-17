@@ -12,14 +12,10 @@ public class StatManager : MonoBehaviour
     public float charisma;
     public int money;
 
-    bool isDead = false;
-
     private int highScore;
 
     void Start()
     {
-
-       
         // Keep StatManager when changing scene
         DontDestroyOnLoad(gameObject);
 
@@ -35,14 +31,9 @@ public class StatManager : MonoBehaviour
             health = maxHealth;
         }
 
-        // Check for health depleting to zero
-        if (health <= 0&& !isDead)
-        {
-            
-        }
 
 
-
+        
         // Update the high score if the current money exceeds it
         if (money > highScore)
         {
