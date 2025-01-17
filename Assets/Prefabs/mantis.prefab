@@ -1328,8 +1328,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c0b46a7a19271f419456a0347c4b5d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 300
-  maxhealth: 300
+  health: 450
+  maxhealth: 450
   attack: 10
   charisma: 0
   timer: 0
