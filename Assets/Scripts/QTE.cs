@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class QTE : MonoBehaviour
 {
-    monster monster;
+    public monster monster;
 
     public bool dodge_window;
     public bool attack_window;
