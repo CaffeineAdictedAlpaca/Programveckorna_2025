@@ -10,7 +10,7 @@ public class WinDisableUI : MonoBehaviour
     void Start()
     {
 
-        gameUI = GameObject.FindWithTag("GameUI");
+        gameUI = GameObject.FindWithTag("GameUI").gameObject;
 
 
         
