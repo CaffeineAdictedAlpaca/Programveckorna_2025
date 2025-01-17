@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class WinDisableUI : MonoBehaviour
 {
-
+    GameObject sword;
     GameObject gameUI;
     // Start is called before the first frame update
     void Start()
     {
 
-        gameUI = GameObject.FindWithTag("GameUI").gameObject;
+        gameUI = GameObject.FindObjectOfType<UIManager>().gameObject;
+
+        sword = GameObject.FindGameObjectWithTag("Sword").gameObject;
 
 
         
@@ -21,5 +23,7 @@ public class WinDisableUI : MonoBehaviour
     void Update()
     {
         gameUI.SetActive(false);
+
+        sword.SetActive(false);
     }
 }
