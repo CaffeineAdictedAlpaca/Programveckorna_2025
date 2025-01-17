@@ -10,6 +10,7 @@ public class ItemPrompt : MonoBehaviour
     [SerializeField] float addAttackPercent;
     [SerializeField] float addHealthPercent;
     [SerializeField] float addCharismaPercent;
+    [SerializeField] float addAgilityPercent;
     [SerializeField] float addMaxHealthPercent;
     [SerializeField] int minMoneyAmount = 1; // Minimum money amount
     [SerializeField] int maxMoneyAmount = 200; // Maximum money amount
@@ -21,6 +22,7 @@ public class ItemPrompt : MonoBehaviour
     {
         addMaxHealthPercent = addMaxHealthPercent / 100;
         addAttackPercent = addAttackPercent / 100;
+        addAgilityPercent = addAgilityPercent / 100;
         addHealthPercent = addHealthPercent / 100;
         addCharismaPercent = addCharismaPercent / 100;
 
@@ -71,6 +73,7 @@ public class ItemPrompt : MonoBehaviour
             statManager.attack += statManager.attack * addAttackPercent; // Increase attack by addAttackPercent;
             statManager.health += statManager.health * addHealthPercent;
             statManager.charisma += statManager.charisma * addCharismaPercent;
+            statManager.agility += statManager.agility * addAgilityPercent;
 
             // Generate a random amount of money and add it
             int randomMoney = Random.Range(minMoneyAmount, maxMoneyAmount + 1);
