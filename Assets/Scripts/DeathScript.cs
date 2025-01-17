@@ -11,7 +11,7 @@ public class DeathScript : MonoBehaviour
 
 
     GameObject roomTracker;
-    StatManager statManager;
+    GameObject statManager;
     GameObject fadeCanvas;
     GameObject gameUI;
     // Start is called before the first frame update
@@ -19,8 +19,12 @@ public class DeathScript : MonoBehaviour
     {
         roomTracker = FindAnyObjectByType<RoomTracker>().gameObject;
         fadeCanvas = FindAnyObjectByType<FadeScript>().gameObject;
-        statManager = FindObjectOfType<StatManager>();
+        statManager = FindObjectOfType<StatManager>().gameObject;
+        statManager = FindObjectOfType<StatManager>().gameObject;
         gameUI = GameObject.FindWithTag("GameUI");
+
+        
+
     }
 
     // Update is called once per frame
@@ -28,7 +32,7 @@ public class DeathScript : MonoBehaviour
     {
 
 
-        if (statManager.health <= 0)
+        if (statManager.GetComponent<StatManager>().health <= 0)
         {
 
             isDead = true;
