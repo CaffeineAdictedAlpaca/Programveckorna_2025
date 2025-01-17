@@ -195,7 +195,7 @@ public class monster : MonoBehaviour
             persuade_succes_option.SetActive(false);
             persuade_fail_option.SetActive(false);
             persuade_succes.SetActive(true);
-            print("good ending");
+            health = 0;
         }
     }
     public void Persuade_fail()
