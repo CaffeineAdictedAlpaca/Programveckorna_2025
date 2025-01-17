@@ -5437,7 +5437,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: +20% Charisma
+  m_text: +55% Charisma
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8606,9 +8606,9 @@ MonoBehaviour:
   promptPanel: {fileID: 285144438}
   yesButton: {fileID: 1335847633}
   noButton: {fileID: 1369175768}
-  addAttackPercent: -20
+  addAttackPercent: -30
   addHealthPercent: 0
-  addCharismaPercent: 20
+  addCharismaPercent: 55
   addAgilityPercent: 0
   addMaxHealthPercent: 0
   minMoneyAmount: 1
@@ -9971,7 +9971,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: -20% Attack
+  m_text: -30% Attack
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
